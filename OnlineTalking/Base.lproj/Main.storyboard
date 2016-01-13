@@ -28,7 +28,6 @@
                                 <rect key="frame" x="108" y="159" width="105" height="30"/>
                                 <state key="normal" title="进入宣讲会界面"/>
                                 <connections>
-                                    <action selector="entrySubVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3WZ-yR-AGo"/>
                                     <segue destination="Jg9-4g-Hxu" kind="push" id="OXa-r0-uGz"/>
                                 </connections>
                             </button>
@@ -36,9 +35,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="YuK-bf-qRo"/>
-                    <connections>
-                        <outlet property="entrySubVCBtn" destination="P08-Ql-VaM" id="1z3-2t-yNm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
