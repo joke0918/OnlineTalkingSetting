@@ -17,22 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJF-ZJ-Zs2">
-                                <rect key="frame" x="137" y="79" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJF-ZJ-Zs2">
+                                <rect key="frame" x="145" y="79" width="30" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftZ-31-VP4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P08-Ql-VaM">
-                                <rect key="frame" x="108" y="159" width="105" height="30"/>
-                                <state key="normal" title="进入宣讲会界面"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P08-Ql-VaM">
+                                <rect key="frame" x="115.5" y="117" width="90" height="30"/>
+                                <state key="normal" title="常见问题列表"/>
                                 <connections>
                                     <segue destination="Jg9-4g-Hxu" kind="push" id="OXa-r0-uGz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw1-Q4-xcD">
+                                <rect key="frame" x="123" y="155" width="75" height="30"/>
+                                <state key="normal" title="抢答题列表"/>
+                                <connections>
+                                    <segue destination="Unu-PB-85U" kind="push" id="NZu-Nh-tyx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qw1-Q4-xcD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6k8-4I-Yo0"/>
+                            <constraint firstItem="QJF-ZJ-Zs2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CiL-KL-VRu"/>
+                            <constraint firstItem="P08-Ql-VaM" firstAttribute="top" secondItem="QJF-ZJ-Zs2" secondAttribute="bottom" constant="8" id="EPn-1m-qY7"/>
+                            <constraint firstItem="QJF-ZJ-Zs2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="UgC-K4-upi"/>
+                            <constraint firstItem="P08-Ql-VaM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YzO-vw-XC6"/>
+                            <constraint firstItem="qw1-Q4-xcD" firstAttribute="top" secondItem="P08-Ql-VaM" secondAttribute="bottom" constant="8" id="kgB-qL-BTM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YuK-bf-qRo"/>
                 </viewController>
@@ -48,7 +63,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4L-QX-fgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="355"/>
+            <point key="canvasLocation" x="1018" y="297"/>
+        </scene>
+        <!--ExamAdmin-->
+        <scene sceneID="rKX-PM-5kr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExamAdmin" id="Unu-PB-85U" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AMm-yA-eMC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYv-mZ-IvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012.5" y="346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zqc-tH-R3a">

@@ -12,6 +12,15 @@ import Alamofire
 class CommonQuestionListViewController: UITableViewController {
 
   var commonQuestionListArray: [CommonQuestionModel] = []
+  var commitQuestionCount: Int = 0 {
+    didSet {
+      if commitQuestionCount < oldValue {
+        if commitQuestionCount == 0 {
+          self.getCommonQuestions()
+        }
+      }
+    }
+  }
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +58,25 @@ class CommonQuestionListViewController: UITableViewController {
       
     }
 
+  }
+  
+  @IBAction func addLocalCommonQuestionsAction(sender: AnyObject) {
+    guard let filePath = NSBundle.mainBundle().pathForResource("CommonQuestion.json", ofType: nil),
+      let data = NSData(contentsOfFile: filePath)
+//      let array = NSArray(contentsOfFile: filePath)
+    else { return }
+    
+    do {
+      let array: [[String: AnyObject]] = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! [[String : AnyObject]]
+      self.addLocalCommonQuestion(questionArray: array)
+    } catch {
+      debugPrint("本地Json读取失败")
+    }
+    
+//    for dic in array {
+//      debugPrint(dic)
+//    }
+    
   }
   
   // MARK: - Table view delegate
@@ -129,6 +157,29 @@ class CommonQuestionListViewController: UITableViewController {
     }
   }
 
+  func addLocalCommonQuestion(questionArray array: [[String: AnyObject]]) {
+
+    self.commitQuestionCount = array.count
+    for dic in array {
+      NSThread.sleepForTimeInterval(0.1)
+      let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/376D71EA-858A081C/add"
+      request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
+        response in
+        guard response.result.isSuccess == true,
+          let responseDic = response.result.value as? [String: AnyObject]
+          else {
+            debugPrint(response.result)
+            return }
+        
+        guard responseDic["status"] as? String == "SUCCESS" else { return }
+        self.commitQuestionCount--
+        
+
+      }
+      
+    }
+    
+  }
   
 
 
