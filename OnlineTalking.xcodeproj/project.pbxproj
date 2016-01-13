@@ -21,6 +21,7 @@
 		112D70C91C4625AA008DD268 /* Exam.json in Resources */ = {isa = PBXBuildFile; fileRef = 112D70C81C4625AA008DD268 /* Exam.json */; };
 		112D70CC1C463352008DD268 /* TalkingAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */; };
 		112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */; };
+		112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */; };
 		11FE2AE41C44DC76001FEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */; };
 		11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AE51C44DC76001FEFB2 /* ViewController.swift */; };
 		11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AE71C44DC76001FEFB2 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		112D70C81C4625AA008DD268 /* Exam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exam.json; sourceTree = "<group>"; };
 		112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingAdmin.storyboard; sourceTree = "<group>"; };
 		112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTalkingViewController.swift; sourceTree = "<group>"; };
+		112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingBasicSettingsViewController.swift; sourceTree = "<group>"; };
 		11FE2AE01C44DC75001FEFB2 /* OnlineTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11FE2AE51C44DC76001FEFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */,
+				112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */,
 				112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */,
 			);
 			path = TalkingAdmin;
@@ -406,6 +409,7 @@
 				112D70A81C45F83B008DD268 /* ExamModel.swift in Sources */,
 				112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */,
 				11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */,
+				112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */,
 				112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */,
 				112D70AA1C45FD44008DD268 /* ExamListCell.swift in Sources */,
 				112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */,

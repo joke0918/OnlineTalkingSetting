@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P08-Ql-VaM">
-                                <rect key="frame" x="115.5" y="117" width="90" height="30"/>
+                                <rect key="frame" x="115" y="117" width="90" height="30"/>
                                 <state key="normal" title="常见问题列表"/>
                                 <connections>
                                     <segue destination="Jg9-4g-Hxu" kind="push" id="OXa-r0-uGz"/>
@@ -38,6 +38,13 @@
                                     <segue destination="Unu-PB-85U" kind="push" id="NZu-Nh-tyx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfI-nw-4oQ">
+                                <rect key="frame" x="108" y="193" width="105" height="30"/>
+                                <state key="normal" title="宣讲会配置列表"/>
+                                <connections>
+                                    <segue destination="g3B-aA-rXb" kind="push" id="Fry-tE-3Zm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -46,7 +53,9 @@
                             <constraint firstItem="P08-Ql-VaM" firstAttribute="top" secondItem="QJF-ZJ-Zs2" secondAttribute="bottom" constant="8" id="EPn-1m-qY7"/>
                             <constraint firstItem="QJF-ZJ-Zs2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="UgC-K4-upi"/>
                             <constraint firstItem="P08-Ql-VaM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YzO-vw-XC6"/>
+                            <constraint firstItem="xfI-nw-4oQ" firstAttribute="top" secondItem="qw1-Q4-xcD" secondAttribute="bottom" constant="8" id="bPy-IK-sHo"/>
                             <constraint firstItem="qw1-Q4-xcD" firstAttribute="top" secondItem="P08-Ql-VaM" secondAttribute="bottom" constant="8" id="kgB-qL-BTM"/>
+                            <constraint firstItem="xfI-nw-4oQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rwp-eN-en1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YuK-bf-qRo"/>
@@ -74,6 +83,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYv-mZ-IvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012.5" y="346"/>
+        </scene>
+        <!--TalkingAdmin-->
+        <scene sceneID="A6b-cf-4Hj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TalkingAdmin" id="g3B-aA-rXb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wdU-3o-lCs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qu-ko-pbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zqc-tH-R3a">

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class CreateTalkingViewController: UIViewController {
 
@@ -28,8 +29,46 @@ class CreateTalkingViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+  @IBAction func confirmAction(sender: AnyObject) {
+    guard let companyId = companyIdTextField.text,
+      let name = nameTextField.text,
+      let shortName = shortNameTextField.text,
+      let begin = beginTextField.text,
+      let end = endTextField.text else { return }
     
+    let dic = [
+      "companyId": companyId,
+      "name": name,
+      "shortName": shortName,
+      "begin": begin,
+      "end": end
+    ]
+    let urlString = "http://api.careerfrog.cn/api/talking-admin/create-talking"
+    request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
+      response in
+      guard response.result.isSuccess == true,
+        let responseDic = response.result.value as? [String: AnyObject]
+        else {
+          debugPrint(response.result)
+          return }
+      
+      guard responseDic["status"] as? String == "SUCCESS" else { return }
+      dispatch_async(dispatch_get_main_queue()) {
+        self.navigationController!.popViewControllerAnimated(true)
+      }
+    }
+    
+  }
 
+  
+  @IBAction func currentTimeAction(sender: AnyObject) {
+    let f = NSDateFormatter()
+    f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    let date = NSDate()
+    self.beginTextField.text = f.stringFromDate(date)
+    self.endTextField.text = f.stringFromDate(date)
+  }
     /*
     // MARK: - Navigation
 
