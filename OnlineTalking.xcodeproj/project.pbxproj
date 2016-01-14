@@ -19,7 +19,6 @@
 		112D70C51C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */; };
 		112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */; };
 		112D70C91C4625AA008DD268 /* Exam.json in Resources */ = {isa = PBXBuildFile; fileRef = 112D70C81C4625AA008DD268 /* Exam.json */; };
-		112D70CC1C463352008DD268 /* TalkingAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */; };
 		112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */; };
 		112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */; };
 		1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */; };
@@ -31,6 +30,24 @@
 		11FE2AF91C44DC76001FEFB2 /* OnlineTalkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AF81C44DC76001FEFB2 /* OnlineTalkingTests.swift */; };
 		11FE2B041C44DC76001FEFB2 /* OnlineTalkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2B031C44DC76001FEFB2 /* OnlineTalkingUITests.swift */; };
 		46C86C4BE888DBEB9034DD02 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561B37D20F0C6E075C4F6751 /* Pods.framework */; };
+		764B67A21C4783A700B7859B /* TalkingSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764B679B1C4783A700B7859B /* TalkingSetting.storyboard */; };
+		764B67A31C4783A700B7859B /* TalkingSettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */; };
+		764B67A41C4783A700B7859B /* TalkingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679D1C4783A700B7859B /* TalkingListViewController.swift */; };
+		764B67A51C4783A700B7859B /* TalkingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679E1C4783A700B7859B /* TalkingListCell.swift */; };
+		764B67A61C4783A700B7859B /* TalkingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679F1C4783A700B7859B /* TalkingListModel.swift */; };
+		764B67A71C4783A700B7859B /* TalkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67A01C4783A700B7859B /* TalkingModel.swift */; };
+		764B67A81C4783A700B7859B /* TalkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67A11C4783A700B7859B /* TalkingManager.swift */; };
+		764B67AC1C47853000B7859B /* CompanyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67A91C47853000B7859B /* CompanyListViewController.swift */; };
+		764B67AD1C47853000B7859B /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67AA1C47853000B7859B /* CompanyModel.swift */; };
+		764B67AE1C47853000B7859B /* CompanyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67AB1C47853000B7859B /* CompanyListCell.swift */; };
+		764B67B01C47856A00B7859B /* CommonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67AF1C47856A00B7859B /* CommonHelper.swift */; };
+		764B67B61C47858200B7859B /* TalkingGuestAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764B67B11C47858200B7859B /* TalkingGuestAdmin.storyboard */; };
+		764B67B71C47858200B7859B /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B21C47858200B7859B /* GuestListViewController.swift */; };
+		764B67B81C47858200B7859B /* UpdateGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B31C47858200B7859B /* UpdateGuestViewController.swift */; };
+		764B67B91C47858200B7859B /* GuestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B41C47858200B7859B /* GuestListCell.swift */; };
+		764B67BA1C47858200B7859B /* GuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B51C47858200B7859B /* GuestModel.swift */; };
+		764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */; };
+		764B67BE1C47900500B7859B /* Guests.json in Resources */ = {isa = PBXBuildFile; fileRef = 764B67BD1C47900500B7859B /* Guests.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +80,6 @@
 		112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCommonQuestionViewController.swift; sourceTree = "<group>"; };
 		112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateExamViewController.swift; sourceTree = "<group>"; };
 		112D70C81C4625AA008DD268 /* Exam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exam.json; sourceTree = "<group>"; };
-		112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingAdmin.storyboard; sourceTree = "<group>"; };
 		112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTalkingViewController.swift; sourceTree = "<group>"; };
 		112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingBasicSettingsViewController.swift; sourceTree = "<group>"; };
 		1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingIndexSettingsViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +97,24 @@
 		11FE2B031C44DC76001FEFB2 /* OnlineTalkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineTalkingUITests.swift; sourceTree = "<group>"; };
 		11FE2B051C44DC76001FEFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		561B37D20F0C6E075C4F6751 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		764B679B1C4783A700B7859B /* TalkingSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingSetting.storyboard; sourceTree = "<group>"; };
+		764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingSettingListViewController.swift; sourceTree = "<group>"; };
+		764B679D1C4783A700B7859B /* TalkingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingListViewController.swift; sourceTree = "<group>"; };
+		764B679E1C4783A700B7859B /* TalkingListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingListCell.swift; sourceTree = "<group>"; };
+		764B679F1C4783A700B7859B /* TalkingListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingListModel.swift; sourceTree = "<group>"; };
+		764B67A01C4783A700B7859B /* TalkingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingModel.swift; sourceTree = "<group>"; };
+		764B67A11C4783A700B7859B /* TalkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingManager.swift; sourceTree = "<group>"; };
+		764B67A91C47853000B7859B /* CompanyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyListViewController.swift; sourceTree = "<group>"; };
+		764B67AA1C47853000B7859B /* CompanyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		764B67AB1C47853000B7859B /* CompanyListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyListCell.swift; sourceTree = "<group>"; };
+		764B67AF1C47856A00B7859B /* CommonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHelper.swift; sourceTree = "<group>"; };
+		764B67B11C47858200B7859B /* TalkingGuestAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingGuestAdmin.storyboard; sourceTree = "<group>"; };
+		764B67B21C47858200B7859B /* GuestListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
+		764B67B31C47858200B7859B /* UpdateGuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateGuestViewController.swift; sourceTree = "<group>"; };
+		764B67B41C47858200B7859B /* GuestListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListCell.swift; sourceTree = "<group>"; };
+		764B67B51C47858200B7859B /* GuestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestModel.swift; sourceTree = "<group>"; };
+		764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVideoSettingViewController.swift; sourceTree = "<group>"; };
+		764B67BD1C47900500B7859B /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
 		AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BEFB972E75507C1876636E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +174,7 @@
 		112D70CA1C463339008DD268 /* TalkingAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */,
+				764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */,
 				1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */,
 				112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */,
 				112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */,
@@ -176,8 +210,12 @@
 				112D70CA1C463339008DD268 /* TalkingAdmin */,
 				112D70B91C45FFF1008DD268 /* CommonQuestionAdmin */,
 				112D70A41C45F783008DD268 /* ExamAdmin */,
+				764B67841C47791B00B7859B /* TalkingGuestAdmin */,
+				764B67781C47791B00B7859B /* TalkingSetting */,
+				764B67801C47791B00B7859B /* CompanyAdmin */,
 				11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */,
 				11FE2AE51C44DC76001FEFB2 /* ViewController.swift */,
+				764B67AF1C47856A00B7859B /* CommonHelper.swift */,
 				11FE2AE71C44DC76001FEFB2 /* Main.storyboard */,
 				11FE2AEA1C44DC76001FEFB2 /* Assets.xcassets */,
 				11FE2AEC1C44DC76001FEFB2 /* LaunchScreen.storyboard */,
@@ -210,6 +248,43 @@
 				561B37D20F0C6E075C4F6751 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		764B67781C47791B00B7859B /* TalkingSetting */ = {
+			isa = PBXGroup;
+			children = (
+				764B679B1C4783A700B7859B /* TalkingSetting.storyboard */,
+				764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */,
+				764B679D1C4783A700B7859B /* TalkingListViewController.swift */,
+				764B679E1C4783A700B7859B /* TalkingListCell.swift */,
+				764B679F1C4783A700B7859B /* TalkingListModel.swift */,
+				764B67A01C4783A700B7859B /* TalkingModel.swift */,
+				764B67A11C4783A700B7859B /* TalkingManager.swift */,
+			);
+			path = TalkingSetting;
+			sourceTree = "<group>";
+		};
+		764B67801C47791B00B7859B /* CompanyAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				764B67A91C47853000B7859B /* CompanyListViewController.swift */,
+				764B67AA1C47853000B7859B /* CompanyModel.swift */,
+				764B67AB1C47853000B7859B /* CompanyListCell.swift */,
+			);
+			path = CompanyAdmin;
+			sourceTree = "<group>";
+		};
+		764B67841C47791B00B7859B /* TalkingGuestAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				764B67BD1C47900500B7859B /* Guests.json */,
+				764B67B11C47858200B7859B /* TalkingGuestAdmin.storyboard */,
+				764B67B21C47858200B7859B /* GuestListViewController.swift */,
+				764B67B31C47858200B7859B /* UpdateGuestViewController.swift */,
+				764B67B41C47858200B7859B /* GuestListCell.swift */,
+				764B67B51C47858200B7859B /* GuestModel.swift */,
+			);
+			path = TalkingGuestAdmin;
 			sourceTree = "<group>";
 		};
 		DD8870CD59E0F3B806B15864 /* Pods */ = {
@@ -328,13 +403,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764B67A21C4783A700B7859B /* TalkingSetting.storyboard in Resources */,
 				11FE2AEE1C44DC76001FEFB2 /* LaunchScreen.storyboard in Resources */,
-				112D70CC1C463352008DD268 /* TalkingAdmin.storyboard in Resources */,
 				112D70C91C4625AA008DD268 /* Exam.json in Resources */,
 				11FE2AEB1C44DC76001FEFB2 /* Assets.xcassets in Resources */,
 				11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */,
 				112D70C01C45FFF1008DD268 /* CommonQuestion.json in Resources */,
+				764B67BE1C47900500B7859B /* Guests.json in Resources */,
 				112D70A61C45F78E008DD268 /* ExamAdmin.storyboard in Resources */,
+				764B67B61C47858200B7859B /* TalkingGuestAdmin.storyboard in Resources */,
 				112D70C41C45FFF1008DD268 /* TalkingAdmin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,17 +487,32 @@
 			files = (
 				112D70C11C45FFF1008DD268 /* CommonQuestionCell.swift in Sources */,
 				112D70A81C45F83B008DD268 /* ExamModel.swift in Sources */,
+				764B67AC1C47853000B7859B /* CompanyListViewController.swift in Sources */,
+				764B67A81C4783A700B7859B /* TalkingManager.swift in Sources */,
+				764B67B01C47856A00B7859B /* CommonHelper.swift in Sources */,
 				1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */,
 				112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */,
+				764B67B71C47858200B7859B /* GuestListViewController.swift in Sources */,
+				764B67A41C4783A700B7859B /* TalkingListViewController.swift in Sources */,
 				11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */,
 				112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */,
+				764B67B91C47858200B7859B /* GuestListCell.swift in Sources */,
+				764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */,
 				112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */,
 				112D70AA1C45FD44008DD268 /* ExamListCell.swift in Sources */,
+				764B67A31C4783A700B7859B /* TalkingSettingListViewController.swift in Sources */,
+				764B67A71C4783A700B7859B /* TalkingModel.swift in Sources */,
 				112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */,
+				764B67A61C4783A700B7859B /* TalkingListModel.swift in Sources */,
 				11FE2AE41C44DC76001FEFB2 /* AppDelegate.swift in Sources */,
+				764B67A51C4783A700B7859B /* TalkingListCell.swift in Sources */,
 				112D70C31C45FFF1008DD268 /* CommonQuestionModel.swift in Sources */,
+				764B67B81C47858200B7859B /* UpdateGuestViewController.swift in Sources */,
+				764B67AD1C47853000B7859B /* CompanyModel.swift in Sources */,
 				112D70AC1C45FDAD008DD268 /* ExamListViewController.swift in Sources */,
+				764B67BA1C47858200B7859B /* GuestModel.swift in Sources */,
 				112D70C51C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift in Sources */,
+				764B67AE1C47853000B7859B /* CompanyListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

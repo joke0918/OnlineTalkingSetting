@@ -1,0 +1,35 @@
+[
+ {
+ "username": "测试嘉宾01",
+ "nickname": "test01",
+ "position": "XXXX人力资源总监",
+ "avatarUrl": "http://7xl461.com2.z0.glb.qiniucdn.com/Images%2Fteacher%2Fhk.png",
+ "user": "test01",
+ "pass": "test01",
+ "admin": true,
+ "order": 0,
+ "display": false
+ },
+ {
+ "username": "测试嘉宾02",
+ "nickname": "test02",
+ "position": "XXXX咨询顾问",
+ "avatarUrl": "http://7xl461.com2.z0.glb.qiniucdn.com/Images%2Fteacher%2Fhk.png",
+ "user": "test02",
+ "pass": "test02",
+ "admin": false,
+ "order": 1,
+ "display": false
+ },
+ {
+ "username": "测试嘉宾03",
+ "nickname": "test03",
+ "position": "XXXX人事专员",
+ "avatarUrl": "http://7xl461.com2.z0.glb.qiniucdn.com/Images%2Fteacher%2Fhk.png",
+ "user": "test03",
+ "pass": "test03",
+ "admin": false,
+ "order": 2,
+ "display": false
+ }
+	]

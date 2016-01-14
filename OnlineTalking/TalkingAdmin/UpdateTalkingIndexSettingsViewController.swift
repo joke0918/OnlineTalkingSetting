@@ -15,10 +15,11 @@ class UpdateTalkingIndexSettingsViewController: UIViewController {
   @IBOutlet weak var videoBgImageUrlTextField: UITextField!
   @IBOutlet weak var introductionSwitch: UISwitch!
   @IBOutlet weak var introductionNameTextField: UITextField!
-
+	var talkingModel: TalkingModel!
   
     override func viewDidLoad() {
         super.viewDidLoad()
+			self.talkingModel = TalkingManager.sharedInstance.talkingModel
       self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
@@ -44,7 +45,7 @@ class UpdateTalkingIndexSettingsViewController: UIViewController {
     if !result.isSuccess {
       return
     }
-    let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/376D71EA-858A081C/index"
+    let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/\(TalkingManager.sharedInstance.currentTalkingID)/index"
     request(.PUT, urlString, parameters: result.dic, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -72,7 +73,11 @@ class UpdateTalkingIndexSettingsViewController: UIViewController {
   }
   
   func fillDataForUI() {
-    
+    self.bgImageUrlTextField.text = self.talkingModel.indexBgImageUrl
+		self.videoBgImageUrlTextField.text = self.talkingModel.indexVideoBgImageUrl
+		self.introductionSwitch.on = self.talkingModel.indexIntroduction
+		self.introductionNameTextField.text = self.talkingModel.indexIntroductionName
+		
   }
   
 }

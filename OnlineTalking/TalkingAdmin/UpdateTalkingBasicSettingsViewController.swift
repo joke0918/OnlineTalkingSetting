@@ -18,10 +18,11 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   @IBOutlet weak var domainUrlTextField: UITextField!
   @IBOutlet weak var applyUrlTextField: UITextField!
   @IBOutlet weak var mobileApplyUrlTextField: UITextField!
-
+	var talkingModel: TalkingModel!
   
     override func viewDidLoad() {
         super.viewDidLoad()
+			self.talkingModel = TalkingManager.sharedInstance.talkingModel
       self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
@@ -53,7 +54,7 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
       return
     }
     
-    let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/376D71EA-858A081C/basic"
+    let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/\(TalkingManager.sharedInstance.currentTalkingID)/basic"
     request(.PUT, urlString, parameters: result.dic, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -78,7 +79,13 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   }
   
   func fillDataForUI() {
-    
+    self.nameTextField.text = self.talkingModel.name
+		self.shortNameTextField.text = self.talkingModel.shortName
+		self.beginTextField.text = self.talkingModel.beginTimeString
+		self.endTextField.text = self.talkingModel.endTimeString
+		self.domainUrlTextField.text = self.talkingModel.domainUrl
+		self.applyUrlTextField.text = self.talkingModel.applyUrl
+		self.mobileApplyUrlTextField.text = self.talkingModel.mobileApplyUrl
   }
   
   private func generateParameters() -> (dic: [String: AnyObject]?, isSuccess: Bool) {

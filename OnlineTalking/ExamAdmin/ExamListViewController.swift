@@ -82,6 +82,23 @@ class ExamListViewController: UITableViewController {
     }
 
 
+	@IBAction func cleanExam(sender: AnyObject) {
+		let urlString = "http://api.careerfrog.cn/api/exam-admin/\(TalkingManager.sharedInstance.currentTalkingID)/clean"
+		request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
+			response in
+			guard response.result.isSuccess == true,
+				let responseDic = response.result.value as? [String: AnyObject]
+				else {
+					debugPrint(response.result)
+					return }
+			
+			guard responseDic["status"] as? String == "SUCCESS" else { return }
+			dispatch_async(dispatch_get_main_queue()) {
+				self.showAlertWithMessage("清除直通券获奖名单成功")
+			}
+		}
+	}
+	
   @IBAction func addLocalExams(sender: AnyObject) {
     guard let filePath = NSBundle.mainBundle().pathForResource("Exam.json", ofType: nil),
       let data = NSData(contentsOfFile: filePath)
@@ -97,7 +114,7 @@ class ExamListViewController: UITableViewController {
   }
   
   private func getExamList() {
-    let urlString = "http://api.careerfrog.cn/api/exam/376D71EA-858A081C/exams"
+    let urlString = "http://api.careerfrog.cn/api/exam/\(TalkingManager.sharedInstance.currentTalkingID)/exams"
     request(.GET, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -125,7 +142,7 @@ class ExamListViewController: UITableViewController {
       debugPrint("exmaId 不能为空")
       return
     }
-    let urlString = "http://api.careerfrog.cn/api/exam-admin/376D71EA-858A081C/\(examId)"
+    let urlString = "http://api.careerfrog.cn/api/exam-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(examId)"
     request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -145,7 +162,7 @@ class ExamListViewController: UITableViewController {
     self.committingExamCount = array.count
     for dic in array {
       NSThread.sleepForTimeInterval(0.1)
-      let urlString = "http://api.careerfrog.cn/api/exam-admin/376D71EA-858A081C/add"
+      let urlString = "http://api.careerfrog.cn/api/exam-admin/\(TalkingManager.sharedInstance.currentTalkingID)/add"
       request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
         response in
         guard response.result.isSuccess == true,

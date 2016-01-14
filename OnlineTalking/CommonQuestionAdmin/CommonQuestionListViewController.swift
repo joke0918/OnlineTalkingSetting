@@ -116,7 +116,7 @@ class CommonQuestionListViewController: UITableViewController {
     }
   
   private func getCommonQuestions() {
-    let urlString = "http://api.careerfrog.cn/api/qa/376D71EA-858A081C/com-questions"
+    let urlString = "http://api.careerfrog.cn/api/qa/\(TalkingManager.sharedInstance.currentTalkingID)/com-questions"
     request(.GET, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -141,7 +141,7 @@ class CommonQuestionListViewController: UITableViewController {
   }
 
   func deleteCommonQuestion(questionId: String) {
-    let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/376D71EA-858A081C/\(questionId)"
+    let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(questionId)"
     request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -162,7 +162,7 @@ class CommonQuestionListViewController: UITableViewController {
     self.commitQuestionCount = array.count
     for dic in array {
       NSThread.sleepForTimeInterval(0.1)
-      let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/376D71EA-858A081C/add"
+      let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/\(TalkingManager.sharedInstance.currentTalkingID)/add"
       request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
         response in
         guard response.result.isSuccess == true,

@@ -76,7 +76,7 @@ class UpdateCommonQuestionViewController: UIViewController {
   }
   
   func createCommonQuestion(dic: [String: AnyObject]) {
-    let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/376D71EA-858A081C/add"
+    let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/\(TalkingManager.sharedInstance.currentTalkingID)/add"
     request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,
@@ -94,7 +94,7 @@ class UpdateCommonQuestionViewController: UIViewController {
   }
   
   func updateCommonQuestion(dic: [String: AnyObject]) {
-    let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/376D71EA-858A081C/\(self.commonQuestionModel.questionId)"
+    let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(self.commonQuestionModel.questionId)"
     request(.PUT, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
       response in
       guard response.result.isSuccess == true,

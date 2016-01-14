@@ -20,7 +20,11 @@ class CreateTalkingViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      self.companyIdTextField.text = "376D71EA"
+			guard TalkingManager.sharedInstance.currentCompanyID != "" else {
+				self.showAlertWithMessage("CompanyId不能为空")
+				return
+			}
+      self.companyIdTextField.text = TalkingManager.sharedInstance.currentCompanyID
       
         // Do any additional setup after loading the view.
     }
