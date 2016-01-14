@@ -41,9 +41,6 @@ class ViewController: UIViewController {
         }
     }
   
-  @IBAction func entrySubVC(sender: AnyObject) {
-    
-  }
     
 }
 

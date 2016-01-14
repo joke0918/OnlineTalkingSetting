@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11FDD5BD1C44F0EA00ECC960 /* TalkingAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FDD5BC1C44F0EA00ECC960 /* TalkingAdmin.storyboard */; };
-		11FDD5BF1C44F19B00ECC960 /* CommonQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDD5BE1C44F19B00ECC960 /* CommonQuestionModel.swift */; };
-		11FDD5C11C44F46D00ECC960 /* CommonQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDD5C01C44F46D00ECC960 /* CommonQuestionCell.swift */; };
-		11FDD5C31C44F5E000ECC960 /* CommonQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDD5C21C44F5E000ECC960 /* CommonQuestionListViewController.swift */; };
-		11FDD5C51C44FBF900ECC960 /* UpdateCommonQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FDD5C41C44FBF900ECC960 /* UpdateCommonQuestionViewController.swift */; };
+		112D70A61C45F78E008DD268 /* ExamAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70A51C45F78E008DD268 /* ExamAdmin.storyboard */; };
+		112D70A81C45F83B008DD268 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70A71C45F83B008DD268 /* ExamModel.swift */; };
+		112D70AA1C45FD44008DD268 /* ExamListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70A91C45FD44008DD268 /* ExamListCell.swift */; };
+		112D70AC1C45FDAD008DD268 /* ExamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70AB1C45FDAD008DD268 /* ExamListViewController.swift */; };
+		112D70C01C45FFF1008DD268 /* CommonQuestion.json in Resources */ = {isa = PBXBuildFile; fileRef = 112D70BA1C45FFF1008DD268 /* CommonQuestion.json */; };
+		112D70C11C45FFF1008DD268 /* CommonQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BB1C45FFF1008DD268 /* CommonQuestionCell.swift */; };
+		112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BC1C45FFF1008DD268 /* CommonQuestionListViewController.swift */; };
+		112D70C31C45FFF1008DD268 /* CommonQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BD1C45FFF1008DD268 /* CommonQuestionModel.swift */; };
+		112D70C41C45FFF1008DD268 /* TalkingAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70BE1C45FFF1008DD268 /* TalkingAdmin.storyboard */; };
+		112D70C51C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */; };
+		112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */; };
+		112D70C91C4625AA008DD268 /* Exam.json in Resources */ = {isa = PBXBuildFile; fileRef = 112D70C81C4625AA008DD268 /* Exam.json */; };
+		112D70CC1C463352008DD268 /* TalkingAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */; };
+		112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */; };
+		112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */; };
+		1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */; };
 		11FE2AE41C44DC76001FEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */; };
 		11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AE51C44DC76001FEFB2 /* ViewController.swift */; };
 		11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AE71C44DC76001FEFB2 /* Main.storyboard */; };
@@ -40,11 +51,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11FDD5BC1C44F0EA00ECC960 /* TalkingAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingAdmin.storyboard; sourceTree = "<group>"; };
-		11FDD5BE1C44F19B00ECC960 /* CommonQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionModel.swift; sourceTree = "<group>"; };
-		11FDD5C01C44F46D00ECC960 /* CommonQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionCell.swift; sourceTree = "<group>"; };
-		11FDD5C21C44F5E000ECC960 /* CommonQuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionListViewController.swift; sourceTree = "<group>"; };
-		11FDD5C41C44FBF900ECC960 /* UpdateCommonQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCommonQuestionViewController.swift; sourceTree = "<group>"; };
+		112D70A51C45F78E008DD268 /* ExamAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExamAdmin.storyboard; sourceTree = "<group>"; };
+		112D70A71C45F83B008DD268 /* ExamModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
+		112D70A91C45FD44008DD268 /* ExamListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListCell.swift; sourceTree = "<group>"; };
+		112D70AB1C45FDAD008DD268 /* ExamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamListViewController.swift; sourceTree = "<group>"; };
+		112D70BA1C45FFF1008DD268 /* CommonQuestion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CommonQuestion.json; sourceTree = "<group>"; };
+		112D70BB1C45FFF1008DD268 /* CommonQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionCell.swift; sourceTree = "<group>"; };
+		112D70BC1C45FFF1008DD268 /* CommonQuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionListViewController.swift; sourceTree = "<group>"; };
+		112D70BD1C45FFF1008DD268 /* CommonQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionModel.swift; sourceTree = "<group>"; };
+		112D70BE1C45FFF1008DD268 /* TalkingAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingAdmin.storyboard; sourceTree = "<group>"; };
+		112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCommonQuestionViewController.swift; sourceTree = "<group>"; };
+		112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateExamViewController.swift; sourceTree = "<group>"; };
+		112D70C81C4625AA008DD268 /* Exam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exam.json; sourceTree = "<group>"; };
+		112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingAdmin.storyboard; sourceTree = "<group>"; };
+		112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTalkingViewController.swift; sourceTree = "<group>"; };
+		112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingBasicSettingsViewController.swift; sourceTree = "<group>"; };
+		1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingIndexSettingsViewController.swift; sourceTree = "<group>"; };
 		11FE2AE01C44DC75001FEFB2 /* OnlineTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11FE2AE51C44DC76001FEFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,14 +111,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11FDD5BB1C44F0CF00ECC960 /* TalkingAdmin */ = {
+		112D70A41C45F783008DD268 /* ExamAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				11FDD5BC1C44F0EA00ECC960 /* TalkingAdmin.storyboard */,
-				11FDD5C21C44F5E000ECC960 /* CommonQuestionListViewController.swift */,
-				11FDD5BE1C44F19B00ECC960 /* CommonQuestionModel.swift */,
-				11FDD5C01C44F46D00ECC960 /* CommonQuestionCell.swift */,
-				11FDD5C41C44FBF900ECC960 /* UpdateCommonQuestionViewController.swift */,
+				112D70C81C4625AA008DD268 /* Exam.json */,
+				112D70A51C45F78E008DD268 /* ExamAdmin.storyboard */,
+				112D70AB1C45FDAD008DD268 /* ExamListViewController.swift */,
+				112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */,
+				112D70A91C45FD44008DD268 /* ExamListCell.swift */,
+				112D70A71C45F83B008DD268 /* ExamModel.swift */,
+			);
+			path = ExamAdmin;
+			sourceTree = "<group>";
+		};
+		112D70B91C45FFF1008DD268 /* CommonQuestionAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				112D70BA1C45FFF1008DD268 /* CommonQuestion.json */,
+				112D70BB1C45FFF1008DD268 /* CommonQuestionCell.swift */,
+				112D70BC1C45FFF1008DD268 /* CommonQuestionListViewController.swift */,
+				112D70BD1C45FFF1008DD268 /* CommonQuestionModel.swift */,
+				112D70BE1C45FFF1008DD268 /* TalkingAdmin.storyboard */,
+				112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */,
+			);
+			path = CommonQuestionAdmin;
+			sourceTree = "<group>";
+		};
+		112D70CA1C463339008DD268 /* TalkingAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				112D70CB1C463352008DD268 /* TalkingAdmin.storyboard */,
+				1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */,
+				112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */,
+				112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */,
 			);
 			path = TalkingAdmin;
 			sourceTree = "<group>";
@@ -126,7 +173,9 @@
 		11FE2AE21C44DC75001FEFB2 /* OnlineTalking */ = {
 			isa = PBXGroup;
 			children = (
-				11FDD5BB1C44F0CF00ECC960 /* TalkingAdmin */,
+				112D70CA1C463339008DD268 /* TalkingAdmin */,
+				112D70B91C45FFF1008DD268 /* CommonQuestionAdmin */,
+				112D70A41C45F783008DD268 /* ExamAdmin */,
 				11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */,
 				11FE2AE51C44DC76001FEFB2 /* ViewController.swift */,
 				11FE2AE71C44DC76001FEFB2 /* Main.storyboard */,
@@ -280,9 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FE2AEE1C44DC76001FEFB2 /* LaunchScreen.storyboard in Resources */,
-				11FDD5BD1C44F0EA00ECC960 /* TalkingAdmin.storyboard in Resources */,
+				112D70CC1C463352008DD268 /* TalkingAdmin.storyboard in Resources */,
+				112D70C91C4625AA008DD268 /* Exam.json in Resources */,
 				11FE2AEB1C44DC76001FEFB2 /* Assets.xcassets in Resources */,
 				11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */,
+				112D70C01C45FFF1008DD268 /* CommonQuestion.json in Resources */,
+				112D70A61C45F78E008DD268 /* ExamAdmin.storyboard in Resources */,
+				112D70C41C45FFF1008DD268 /* TalkingAdmin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,12 +408,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11FDD5C11C44F46D00ECC960 /* CommonQuestionCell.swift in Sources */,
+				112D70C11C45FFF1008DD268 /* CommonQuestionCell.swift in Sources */,
+				112D70A81C45F83B008DD268 /* ExamModel.swift in Sources */,
+				1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */,
+				112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */,
 				11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */,
-				11FDD5C51C44FBF900ECC960 /* UpdateCommonQuestionViewController.swift in Sources */,
-				11FDD5BF1C44F19B00ECC960 /* CommonQuestionModel.swift in Sources */,
-				11FDD5C31C44F5E000ECC960 /* CommonQuestionListViewController.swift in Sources */,
+				112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */,
+				112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */,
+				112D70AA1C45FD44008DD268 /* ExamListCell.swift in Sources */,
+				112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */,
 				11FE2AE41C44DC76001FEFB2 /* AppDelegate.swift in Sources */,
+				112D70C31C45FFF1008DD268 /* CommonQuestionModel.swift in Sources */,
+				112D70AC1C45FDAD008DD268 /* ExamListViewController.swift in Sources */,
+				112D70C51C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,10 +563,13 @@
 			baseConfigurationReference = AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Careerfrog.OnlineTalking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.onlinetalkingsetting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -515,10 +578,13 @@
 			baseConfigurationReference = F0BEFB972E75507C1876636E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Careerfrog.OnlineTalking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.onlinetalkingsetting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
