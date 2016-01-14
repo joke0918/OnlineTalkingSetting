@@ -52,14 +52,11 @@ class TalkingListViewController: UIViewController {
 
 		request(.GET, "http://api.careerfrog.cn/api/talking-admin/talkings/" + "\(TalkingManager.sharedInstance.currentCompanyID)", parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
 			response in
-			guard response.result.isSuccess == true else {
-				debugPrint(response.result.error!)
-				return
-			}
-
-			guard let responseDic = response.result.value as? [String: AnyObject] else {
-				return
-			}
+			guard response.result.isSuccess == true,
+				let responseDic = response.result.value as? [String: AnyObject]
+				else {
+					debugPrint(response.result)
+					return }
 			
 			guard responseDic["status"] as? String == "SUCCESS",
 			let resultDic = responseDic["result"] as? [[String: AnyObject]] else { return }

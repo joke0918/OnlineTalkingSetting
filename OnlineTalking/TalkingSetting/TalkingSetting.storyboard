@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G6D-0c-yYo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="G6D-0c-yYo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -23,8 +23,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="createTalking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMA-ki-CJG">
-                                                    <rect key="frame" x="15" y="12" width="345" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="createTalking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMA-ki-CJG">
+                                                    <rect key="frame" x="15" y="12" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="lMP-0l-w01" kind="show" id="Ctn-V1-6M0"/>
+                                            <segue destination="lMP-0l-w01" kind="modal" id="Ctn-V1-6M0"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="FhP-y9-ehS">
@@ -47,8 +47,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="updateTalkingBasicSettings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-nc-EKe">
-                                                    <rect key="frame" x="15" y="12" width="345" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updateTalkingBasicSettings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-nc-EKe">
+                                                    <rect key="frame" x="15" y="12" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="F4d-7h-nTt" kind="show" id="UX4-4f-B98"/>
+                                            <segue destination="F4d-7h-nTt" kind="modal" id="UX4-4f-B98"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="XBP-uQ-CkE">
@@ -71,8 +71,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="updateTalkingIndexSettings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPu-6O-MbW">
-                                                    <rect key="frame" x="15" y="12" width="345" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updateTalkingIndexSettings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPu-6O-MbW">
+                                                    <rect key="frame" x="15" y="12" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -85,18 +85,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vKq-A3-zEc" kind="show" id="Qgj-Oa-O3J"/>
+                                            <segue destination="vKq-A3-zEc" kind="modal" id="Qgj-Oa-O3J"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hB1-Pc-I1C">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="hB1-Pc-I1C">
                                         <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hB1-Pc-I1C" id="E3e-Ll-sBh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updateRegistrationSetting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-F0-tuc">
-                                                    <rect key="frame" x="15" y="12" width="345" height="20"/>
+                                                    <rect key="frame" x="15" y="12" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -108,6 +108,9 @@
                                                 <constraint firstItem="cjM-F0-tuc" firstAttribute="leading" secondItem="E3e-Ll-sBh" secondAttribute="leading" constant="15" id="oCC-qK-YZD"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sye-Qv-FZn" kind="push" id="nle-GB-qGg"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XS3-a7-yht">
                                         <rect key="frame" x="0.0" y="204" width="375" height="44"/>
@@ -194,7 +197,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="5Cg-Zc-u3L" kind="show" id="pqp-Ir-bLE"/>
+                                            <segue destination="5Cg-Zc-u3L" kind="modal" id="pqp-Ir-bLE"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PGD-lf-y0w">
@@ -289,7 +292,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="z28-xM-xyE" kind="show" id="YvI-87-Nwr"/>
+                                            <segue destination="z28-xM-xyE" kind="push" id="YvI-87-Nwr"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -303,8 +306,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="getExams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHf-Zj-kHs">
-                                                    <rect key="frame" x="15" y="12" width="345" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="getExams" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHf-Zj-kHs">
+                                                    <rect key="frame" x="15" y="12" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -317,7 +320,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="doS-Q8-Uib" kind="show" id="hsM-Rc-Znc"/>
+                                            <segue destination="doS-Q8-Uib" kind="push" id="hsM-Rc-Znc"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -378,23 +381,118 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fo7-MJ-Ybv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.5" y="363.5"/>
+            <point key="canvasLocation" x="909.06666666666661" y="344.11333333333334"/>
         </scene>
         <!--ExamAdmin-->
         <scene sceneID="viL-wo-9L1">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExamAdmin" id="doS-Q8-Uib" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ExamAdmin" id="doS-Q8-Uib" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WNc-fx-kVO"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bI4-M3-F6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916.5" y="860"/>
+            <point key="canvasLocation" x="171.5" y="870"/>
+        </scene>
+        <!--Update Registration Setting View Controller-->
+        <scene sceneID="2eD-5s-4qY">
+            <objects>
+                <viewController id="sye-Qv-FZn" customClass="UpdateRegistrationSettingViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hUh-sf-Qnh"/>
+                        <viewControllerLayoutGuide type="bottom" id="uRv-cc-VS3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hzY-b1-F4E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-65-Iuq">
+                                <rect key="frame" x="15" y="40" width="345" height="123"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FU-Tz-Xow">
+                                        <rect key="frame" x="0.0" y="0.0" width="134" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="profession:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1n-oO-Q4Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0MF-rV-KLN">
+                                                <rect key="frame" x="85" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-en-7VP">
+                                        <rect key="frame" x="0.0" y="46" width="157" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="applyNumber:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18J-rJ-hNx">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kfq-Yz-mA6">
+                                                <rect key="frame" x="108" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ib-EE-8dM">
+                                        <rect key="frame" x="0.0" y="92" width="108" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abroad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozG-vo-CeS">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GUd-KZ-WiK">
+                                                <rect key="frame" x="58" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdQ-8A-5Ad">
+                                <rect key="frame" x="173" y="187" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="confirmAction:" destination="lMP-0l-w01" eventType="touchUpInside" id="0fm-Z4-UJj"/>
+                                    <action selector="confirmAction:" destination="sye-Qv-FZn" eventType="touchUpInside" id="dJ4-CA-LaI"/>
+                                    <action selector="confirmAction:" destination="vKq-A3-zEc" eventType="touchUpInside" id="oSM-FI-6B4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9uJ-65-Iuq" firstAttribute="leading" secondItem="hzY-b1-F4E" secondAttribute="leading" constant="15" id="0UQ-2e-zSb"/>
+                            <constraint firstItem="YdQ-8A-5Ad" firstAttribute="top" secondItem="9uJ-65-Iuq" secondAttribute="bottom" constant="24" id="krw-Kh-dq5"/>
+                            <constraint firstAttribute="trailing" secondItem="9uJ-65-Iuq" secondAttribute="trailing" constant="15" id="tk4-Tu-OMV"/>
+                            <constraint firstItem="9uJ-65-Iuq" firstAttribute="top" secondItem="hUh-sf-Qnh" secondAttribute="bottom" constant="20" id="v9G-1L-4Vg"/>
+                            <constraint firstItem="YdQ-8A-5Ad" firstAttribute="centerX" secondItem="hzY-b1-F4E" secondAttribute="centerX" id="ww9-qF-uHq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gqv-wC-ImD"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="abroadSwitch" destination="GUd-KZ-WiK" id="mxE-Xl-oTA"/>
+                        <outlet property="applyNumberSwitch" destination="Kfq-Yz-mA6" id="eZC-cN-3ZQ"/>
+                        <outlet property="professionSwitch" destination="0MF-rV-KLN" id="ruG-gi-knu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0m5-vb-Thv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1263.5" y="-439.5"/>
         </scene>
         <!--TalkingGuestAdmin-->
         <scene sceneID="e13-e2-lWW">
             <objects>
-                <viewControllerPlaceholder storyboardName="TalkingGuestAdmin" id="z28-xM-xyE" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TalkingGuestAdmin" id="z28-xM-xyE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ETb-Oj-ebU"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFp-7e-fSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136" y="860"/>
+            <point key="canvasLocation" x="-15" y="870"/>
         </scene>
         <!--Update Video Setting View Controller-->
         <scene sceneID="Dkc-wV-DUJ">
@@ -526,7 +624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBz-y0-tv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3454.5" y="113.5"/>
+            <point key="canvasLocation" x="2017.5" y="-3.5"/>
         </scene>
         <!--Create Talking View Controller-->
         <scene sceneID="l1u-MS-Ux0">
@@ -664,7 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uml-A5-8H5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205.5" y="113.5"/>
+            <point key="canvasLocation" x="-102.5" y="-439.5"/>
         </scene>
         <!--Update Talking Basic Settings View Controller-->
         <scene sceneID="FF7-QW-QAk">
@@ -845,7 +943,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX1-wI-0Uu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642.5" y="113.5"/>
+            <point key="canvasLocation" x="386.5" y="-439.5"/>
         </scene>
         <!--Update Talking Index Settings View Controller-->
         <scene sceneID="of7-zS-vTY">
@@ -888,7 +986,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3g-5o-kUo">
-                                                <rect key="frame" x="137" y="0.0" width="208" height="30"/>
+                                                <rect key="frame" x="137" y="0.0" width="209" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -961,7 +1059,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tb-XD-Rmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3050.5" y="113.5"/>
+            <point key="canvasLocation" x="830.5" y="-439.5"/>
         </scene>
     </scenes>
 </document>

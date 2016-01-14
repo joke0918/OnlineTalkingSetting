@@ -57,10 +57,13 @@ class UpdateVideoSettingViewController: UIViewController {
 		let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/" + "\(TalkingManager.sharedInstance.currentTalkingID)" + "/video"
 		request(.PUT, urlString, parameters: bodyDic, encoding: .JSON, headers: nil).responseJSON() {
 			response in
-			guard response.result.isSuccess == true else {
-				debugPrint(response.result)
-				return
-			}
+			guard response.result.isSuccess == true,
+				let responseDic = response.result.value as? [String: AnyObject]
+				else {
+					debugPrint(response.result)
+					return }
+			
+			guard responseDic["status"] as? String == "SUCCESS" else { return }
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				self.showAlertWithMessage("修改成功")
 			})

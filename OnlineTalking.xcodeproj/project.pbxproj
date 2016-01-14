@@ -48,6 +48,7 @@
 		764B67BA1C47858200B7859B /* GuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B51C47858200B7859B /* GuestModel.swift */; };
 		764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */; };
 		764B67BE1C47900500B7859B /* Guests.json in Resources */ = {isa = PBXBuildFile; fileRef = 764B67BD1C47900500B7859B /* Guests.json */; };
+		764B67C01C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		764B67B51C47858200B7859B /* GuestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestModel.swift; sourceTree = "<group>"; };
 		764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVideoSettingViewController.swift; sourceTree = "<group>"; };
 		764B67BD1C47900500B7859B /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
+		764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRegistrationSettingViewController.swift; sourceTree = "<group>"; };
 		AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BEFB972E75507C1876636E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,12 +209,12 @@
 		11FE2AE21C44DC75001FEFB2 /* OnlineTalking */ = {
 			isa = PBXGroup;
 			children = (
+				764B67801C47791B00B7859B /* CompanyAdmin */,
+				764B67781C47791B00B7859B /* TalkingSetting */,
 				112D70CA1C463339008DD268 /* TalkingAdmin */,
 				112D70B91C45FFF1008DD268 /* CommonQuestionAdmin */,
 				112D70A41C45F783008DD268 /* ExamAdmin */,
 				764B67841C47791B00B7859B /* TalkingGuestAdmin */,
-				764B67781C47791B00B7859B /* TalkingSetting */,
-				764B67801C47791B00B7859B /* CompanyAdmin */,
 				11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */,
 				11FE2AE51C44DC76001FEFB2 /* ViewController.swift */,
 				764B67AF1C47856A00B7859B /* CommonHelper.swift */,
@@ -256,6 +258,7 @@
 				764B679B1C4783A700B7859B /* TalkingSetting.storyboard */,
 				764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */,
 				764B679D1C4783A700B7859B /* TalkingListViewController.swift */,
+				764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */,
 				764B679E1C4783A700B7859B /* TalkingListCell.swift */,
 				764B679F1C4783A700B7859B /* TalkingListModel.swift */,
 				764B67A01C4783A700B7859B /* TalkingModel.swift */,
@@ -504,6 +507,7 @@
 				764B67A71C4783A700B7859B /* TalkingModel.swift in Sources */,
 				112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */,
 				764B67A61C4783A700B7859B /* TalkingListModel.swift in Sources */,
+				764B67C01C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift in Sources */,
 				11FE2AE41C44DC76001FEFB2 /* AppDelegate.swift in Sources */,
 				764B67A51C4783A700B7859B /* TalkingListCell.swift in Sources */,
 				112D70C31C45FFF1008DD268 /* CommonQuestionModel.swift in Sources */,

@@ -13,10 +13,18 @@ class CommonHelper: NSObject {
 }
 
 extension UIViewController {
-	func showAlertWithMessage(message: String) {
+	func showAlertWithMessage(message: String, confirmClosure: (UIAlertAction) -> Void) {
 		let alertController = UIAlertController(title: "提示", message: message, preferredStyle: .Alert)
-		let confirmAction = UIAlertAction(title: "确定", style: .Default, handler: nil)
+		let confirmAction = UIAlertAction(title: "确定", style: .Default, handler: confirmClosure)
 		alertController.addAction(confirmAction)
 		self.presentViewController(alertController, animated: true, completion: nil)
 	}
+	
+	func showAlertWithMessage(message: String) {
+	let alertController = UIAlertController(title: "提示", message: message, preferredStyle: .Alert)
+	let confirmAction = UIAlertAction(title: "确定", style: .Default, handler: nil)
+	alertController.addAction(confirmAction)
+	self.presentViewController(alertController, animated: true, completion: nil)
+	}
+	
 }
