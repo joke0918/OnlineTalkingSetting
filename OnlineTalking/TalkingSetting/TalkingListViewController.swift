@@ -38,9 +38,12 @@ class TalkingListViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-			guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+			guard let indexPath = self.tableView.indexPathForSelectedRow,
+				let vc = segue.destinationViewController as? TalkingSettingListViewController
+			else { return }
 			let talkingModel = self.talkingListArray[indexPath.row]
 			TalkingManager.sharedInstance.currentTalkingID = talkingModel.talkingId
+			vc.title = talkingModel.name
     }
 
 	// MARK: - life cycle

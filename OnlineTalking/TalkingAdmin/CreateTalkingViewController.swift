@@ -59,12 +59,15 @@ class CreateTalkingViewController: UIViewController {
       
       guard responseDic["status"] as? String == "SUCCESS" else { return }
       dispatch_async(dispatch_get_main_queue()) {
-        self.navigationController!.popViewControllerAnimated(true)
+				self.dismissViewControllerAnimated(true, completion: nil)
       }
     }
     
   }
 
+	@IBAction func backAction(sender: AnyObject) {
+		self.dismissViewControllerAnimated(true, completion: nil)
+	}
   
   @IBAction func currentTimeAction(sender: AnyObject) {
     let f = NSDateFormatter()

@@ -75,8 +75,8 @@ class UpdateTalkingIndexSettingsViewController: UIViewController {
   func fillDataForUI() {
     self.bgImageUrlTextField.text = self.talkingModel.indexBgImageUrl
 		self.videoBgImageUrlTextField.text = self.talkingModel.indexVideoBgImageUrl
-		self.introductionSwitch.on = self.talkingModel.indexIntroduction
-		self.introductionNameTextField.text = self.talkingModel.indexIntroductionName
+//		self.introductionSwitch.on = self.talkingModel.indexIntroduction
+//		self.introductionNameTextField.text = self.talkingModel.indexIntroductionName
 		
   }
   

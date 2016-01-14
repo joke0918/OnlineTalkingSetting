@@ -81,7 +81,7 @@
 		112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCommonQuestionViewController.swift; sourceTree = "<group>"; };
 		112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateExamViewController.swift; sourceTree = "<group>"; };
 		112D70C81C4625AA008DD268 /* Exam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exam.json; sourceTree = "<group>"; };
-		112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTalkingViewController.swift; sourceTree = "<group>"; };
+		112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTalkingViewController.swift; path = ../TalkingAdmin/CreateTalkingViewController.swift; sourceTree = "<group>"; };
 		112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingBasicSettingsViewController.swift; sourceTree = "<group>"; };
 		1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingIndexSettingsViewController.swift; sourceTree = "<group>"; };
 		11FE2AE01C44DC75001FEFB2 /* OnlineTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 		764B67B51C47858200B7859B /* GuestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestModel.swift; sourceTree = "<group>"; };
 		764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVideoSettingViewController.swift; sourceTree = "<group>"; };
 		764B67BD1C47900500B7859B /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
-		764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateRegistrationSettingViewController.swift; sourceTree = "<group>"; };
+		764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateRegistrationSettingViewController.swift; path = ../TalkingSetting/UpdateRegistrationSettingViewController.swift; sourceTree = "<group>"; };
 		AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BEFB972E75507C1876636E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,10 +176,10 @@
 		112D70CA1C463339008DD268 /* TalkingAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */,
 				764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */,
 				1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */,
 				112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */,
-				112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */,
 			);
 			path = TalkingAdmin;
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 				764B679B1C4783A700B7859B /* TalkingSetting.storyboard */,
 				764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */,
 				764B679D1C4783A700B7859B /* TalkingListViewController.swift */,
-				764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */,
+				112D70CD1C4634BE008DD268 /* CreateTalkingViewController.swift */,
 				764B679E1C4783A700B7859B /* TalkingListCell.swift */,
 				764B679F1C4783A700B7859B /* TalkingListModel.swift */,
 				764B67A01C4783A700B7859B /* TalkingModel.swift */,
