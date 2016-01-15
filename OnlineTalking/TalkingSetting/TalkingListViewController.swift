@@ -11,9 +11,13 @@ import Alamofire
 
 class TalkingListViewController: UIViewController {
 
+	
+	@IBOutlet weak var filterSegmentedControl: UISegmentedControl!
+	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var companyIDTextField: UITextField!
 	private var talkingListArray: [TalkingListModel] = []
+	var filteredTalkingListArray: [TalkingListModel] = []
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +54,35 @@ class TalkingListViewController: UIViewController {
 	// MARK: - delegate
 	// MARK: - response event
 	
+	@IBAction func filterAction(sender: AnyObject) {
+		self.filterTalkingListArray()
+	}
+	
+	func filterTalkingListArray() {
+		switch self.filterSegmentedControl.selectedSegmentIndex {
+		case 0:
+			self.filteredTalkingListArray = self.talkingListArray
+		case 1:
+			self.filteredTalkingListArray = self.talkingListArray.filter() {
+				if $0.test {
+					return true
+				} else {
+					return false
+				}
+			}
+		case 2:
+			self.filteredTalkingListArray = self.talkingListArray.filter() {
+				if $0.test{
+					return false
+				} else {
+					return true
+				}
+			}
+		default:
+			return
+		}
+		self.tableView.reloadData()
+	}
 	
 	func getTalkings() {
 
@@ -68,6 +101,7 @@ class TalkingListViewController: UIViewController {
 				let model = TalkingListModel(dic: talkingListDic)
 				self.talkingListArray.append(model)
 			}
+			self.filterTalkingListArray()
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				self.tableView.reloadData()
 			})
@@ -89,13 +123,13 @@ extension TalkingListViewController: UITableViewDelegate {
 
 extension TalkingListViewController: UITableViewDataSource {
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.talkingListArray.count
+		return self.filteredTalkingListArray.count
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("TalkingListCell", forIndexPath: indexPath) as! TalkingListCell
-		if self.talkingListArray.count != 0 {
-			let talkingListModel = self.talkingListArray[indexPath.row]
+		if self.filteredTalkingListArray.count != 0 {
+			let talkingListModel = self.filteredTalkingListArray[indexPath.row]
 			cell.talkingListModel = talkingListModel
 		}
 		

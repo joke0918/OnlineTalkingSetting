@@ -8,7 +8,7 @@
  "pass": "test01",
  "admin": true,
  "order": 0,
- "display": false
+ "display": true
  },
  {
  "username": "测试嘉宾02",
@@ -19,7 +19,7 @@
  "pass": "test02",
  "admin": false,
  "order": 1,
- "display": false
+ "display": true
  },
  {
  "username": "测试嘉宾03",
@@ -30,6 +30,6 @@
  "pass": "test03",
  "admin": false,
  "order": 2,
- "display": false
+ "display": true
  }
 	]

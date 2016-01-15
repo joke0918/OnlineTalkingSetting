@@ -15,7 +15,7 @@
 		112D70C11C45FFF1008DD268 /* CommonQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BB1C45FFF1008DD268 /* CommonQuestionCell.swift */; };
 		112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BC1C45FFF1008DD268 /* CommonQuestionListViewController.swift */; };
 		112D70C31C45FFF1008DD268 /* CommonQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BD1C45FFF1008DD268 /* CommonQuestionModel.swift */; };
-		112D70C41C45FFF1008DD268 /* TalkingAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70BE1C45FFF1008DD268 /* TalkingAdmin.storyboard */; };
+		112D70C41C45FFF1008DD268 /* CommonQuestionAdmin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112D70BE1C45FFF1008DD268 /* CommonQuestionAdmin.storyboard */; };
 		112D70C51C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */; };
 		112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */; };
 		112D70C91C4625AA008DD268 /* Exam.json in Resources */ = {isa = PBXBuildFile; fileRef = 112D70C81C4625AA008DD268 /* Exam.json */; };
@@ -49,6 +49,11 @@
 		764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */; };
 		764B67BE1C47900500B7859B /* Guests.json in Resources */ = {isa = PBXBuildFile; fileRef = 764B67BD1C47900500B7859B /* Guests.json */; };
 		764B67C01C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */; };
+		765A43341C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */; };
+		767D3B051C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B041C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift */; };
+		767D3B071C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B061C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift */; };
+		767D3B091C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B081C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift */; };
+		767D3B0B1C48E76F00CB813E /* UpdateExamSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B0A1C48E76F00CB813E /* UpdateExamSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +82,7 @@
 		112D70BB1C45FFF1008DD268 /* CommonQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionCell.swift; sourceTree = "<group>"; };
 		112D70BC1C45FFF1008DD268 /* CommonQuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionListViewController.swift; sourceTree = "<group>"; };
 		112D70BD1C45FFF1008DD268 /* CommonQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonQuestionModel.swift; sourceTree = "<group>"; };
-		112D70BE1C45FFF1008DD268 /* TalkingAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingAdmin.storyboard; sourceTree = "<group>"; };
+		112D70BE1C45FFF1008DD268 /* CommonQuestionAdmin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CommonQuestionAdmin.storyboard; sourceTree = "<group>"; };
 		112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateCommonQuestionViewController.swift; sourceTree = "<group>"; };
 		112D70C61C4602E2008DD268 /* UpdateExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateExamViewController.swift; sourceTree = "<group>"; };
 		112D70C81C4625AA008DD268 /* Exam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Exam.json; sourceTree = "<group>"; };
@@ -117,6 +122,11 @@
 		764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVideoSettingViewController.swift; sourceTree = "<group>"; };
 		764B67BD1C47900500B7859B /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
 		764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateRegistrationSettingViewController.swift; path = ../TalkingSetting/UpdateRegistrationSettingViewController.swift; sourceTree = "<group>"; };
+		765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloneAllTalkingSettingViewController.swift; sourceTree = "<group>"; };
+		767D3B041C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateIntroductionSettingViewController.swift; sourceTree = "<group>"; };
+		767D3B061C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateQuestionSettingViewController.swift; sourceTree = "<group>"; };
+		767D3B081C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateQuestionnaireSettingViewController.swift; sourceTree = "<group>"; };
+		767D3B0A1C48E76F00CB813E /* UpdateExamSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateExamSettingViewController.swift; sourceTree = "<group>"; };
 		AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BEFB972E75507C1876636E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,7 +177,7 @@
 				112D70BB1C45FFF1008DD268 /* CommonQuestionCell.swift */,
 				112D70BC1C45FFF1008DD268 /* CommonQuestionListViewController.swift */,
 				112D70BD1C45FFF1008DD268 /* CommonQuestionModel.swift */,
-				112D70BE1C45FFF1008DD268 /* TalkingAdmin.storyboard */,
+				112D70BE1C45FFF1008DD268 /* CommonQuestionAdmin.storyboard */,
 				112D70BF1C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift */,
 			);
 			path = CommonQuestionAdmin;
@@ -176,10 +186,15 @@
 		112D70CA1C463339008DD268 /* TalkingAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */,
-				764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */,
-				1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */,
 				112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */,
+				1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */,
+				764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */,
+				767D3B041C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift */,
+				767D3B061C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift */,
+				767D3B081C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift */,
+				767D3B0A1C48E76F00CB813E /* UpdateExamSettingViewController.swift */,
+				764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */,
+				765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */,
 			);
 			path = TalkingAdmin;
 			sourceTree = "<group>";
@@ -415,7 +430,7 @@
 				764B67BE1C47900500B7859B /* Guests.json in Resources */,
 				112D70A61C45F78E008DD268 /* ExamAdmin.storyboard in Resources */,
 				764B67B61C47858200B7859B /* TalkingGuestAdmin.storyboard in Resources */,
-				112D70C41C45FFF1008DD268 /* TalkingAdmin.storyboard in Resources */,
+				112D70C41C45FFF1008DD268 /* CommonQuestionAdmin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,15 +510,19 @@
 				764B67B01C47856A00B7859B /* CommonHelper.swift in Sources */,
 				1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */,
 				112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */,
+				767D3B091C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift in Sources */,
 				764B67B71C47858200B7859B /* GuestListViewController.swift in Sources */,
 				764B67A41C4783A700B7859B /* TalkingListViewController.swift in Sources */,
 				11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */,
+				767D3B051C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift in Sources */,
 				112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */,
 				764B67B91C47858200B7859B /* GuestListCell.swift in Sources */,
 				764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */,
 				112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */,
+				765A43341C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift in Sources */,
 				112D70AA1C45FD44008DD268 /* ExamListCell.swift in Sources */,
 				764B67A31C4783A700B7859B /* TalkingSettingListViewController.swift in Sources */,
+				767D3B0B1C48E76F00CB813E /* UpdateExamSettingViewController.swift in Sources */,
 				764B67A71C4783A700B7859B /* TalkingModel.swift in Sources */,
 				112D70C21C45FFF1008DD268 /* CommonQuestionListViewController.swift in Sources */,
 				764B67A61C4783A700B7859B /* TalkingListModel.swift in Sources */,
@@ -514,6 +533,7 @@
 				764B67B81C47858200B7859B /* UpdateGuestViewController.swift in Sources */,
 				764B67AD1C47853000B7859B /* CompanyModel.swift in Sources */,
 				112D70AC1C45FDAD008DD268 /* ExamListViewController.swift in Sources */,
+				767D3B071C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift in Sources */,
 				764B67BA1C47858200B7859B /* GuestModel.swift in Sources */,
 				112D70C51C45FFF1008DD268 /* UpdateCommonQuestionViewController.swift in Sources */,
 				764B67AE1C47853000B7859B /* CompanyListCell.swift in Sources */,

@@ -20,6 +20,7 @@ class GuestModel: NSObject {
 	var admin: Bool = false
 	var order: Int = 0
 	var display: Bool = true
+	
 	init(dic: [String: AnyObject]?) {
 		super.init()
 		guard let guestDic = dic,

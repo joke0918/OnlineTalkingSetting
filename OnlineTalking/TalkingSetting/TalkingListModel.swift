@@ -21,6 +21,7 @@ class TalkingListModel: NSObject {
 	var end: NSTimeInterval = 0
 	var beginTimeString: String = ""
 	var endTimeString: String = ""
+	var test: Bool = true
 	
 	init(dic: [String: AnyObject]) {
 		super.init()
@@ -34,7 +35,7 @@ class TalkingListModel: NSObject {
 		guard let talkingScreenId = dic["talkingScreenId"] as? String else { return }
 		guard let begin = dic["begin"]?.doubleValue else { return }
 		guard let end = dic["end"]?.doubleValue else { return }
-		
+		guard let test = dic["test"]?.boolValue else { return }
 		self.applyUrl = applyUrl
 		self.mobileApplyUrl = mobileApplyUrl
 		self.companyId = companyId
@@ -45,6 +46,7 @@ class TalkingListModel: NSObject {
 		self.talkingScreenId = talkingScreenId
 		self.begin = begin
 		self.end = end
+		self.test = test
 		
 		let f = NSDateFormatter()
 		f.dateFormat = "yyyy-MM-dd hh:mm:ss"
