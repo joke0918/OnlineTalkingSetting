@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '44CA6A8B2E808285CF8DFC4E'
-               BlueprintName = 'Alamofire'
+               BlueprintIdentifier = '22111EAD594DF18B5EBBCF41'
+               BlueprintName = 'Pods-OnlineTalking'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Alamofire.framework'>
+               BuildableName = 'Pods_OnlineTalking.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
