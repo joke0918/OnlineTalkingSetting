@@ -47,7 +47,7 @@ class TalkingListViewController: UIViewController {
 			guard let indexPath = self.tableView.indexPathForSelectedRow,
 				let vc = segue.destinationViewController as? TalkingSettingListViewController
 			else { return }
-			let talkingModel = self.talkingListArray[indexPath.row]
+			let talkingModel = self.filteredTalkingListArray[indexPath.row]
 			TalkingManager.sharedInstance.currentTalkingID = talkingModel.talkingId
 			vc.title = talkingModel.name
     }

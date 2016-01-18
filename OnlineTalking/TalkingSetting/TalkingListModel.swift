@@ -49,7 +49,7 @@ class TalkingListModel: NSObject {
 		self.test = test
 		
 		let f = NSDateFormatter()
-		f.dateFormat = "yyyy-MM-dd hh:mm:ss"
+		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
 		
 		let beginDate = NSDate(timeIntervalSince1970: begin / 1000)
 		self.beginTimeString = f.stringFromDate(beginDate)

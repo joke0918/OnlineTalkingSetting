@@ -14,15 +14,11 @@ class UpdateExamSettingViewController: UIViewController {
 	@IBOutlet weak var contentTextView: UITextView!
 	
 	
-	var talkingModel = TalkingManager.sharedInstance.talkingModel {
-		didSet {
-			self.fillDataForUI()
-		}
-	}
+	var talkingModel = TalkingManager.sharedInstance.talkingModel
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-			
+			self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
 

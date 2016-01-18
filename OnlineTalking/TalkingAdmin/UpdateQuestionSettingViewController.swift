@@ -23,9 +23,12 @@ class UpdateQuestionSettingViewController: UIViewController {
 	
 	@IBOutlet weak var datePicker: UIDatePicker!
 	
+	var talkingModel: TalkingModel = TalkingManager.sharedInstance.talkingModel
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.prepareData()
+			self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
 
@@ -95,6 +98,13 @@ class UpdateQuestionSettingViewController: UIViewController {
 			"designated": self.designatedSwitch.on
 		]
 		return (dic, true)
+	}
+	
+	func fillDataForUI() {
+		self.beginTextField.text = self.talkingModel.questionBeginString
+		self.endTextField.text = self.talkingModel.questionEndString
+		self.enableTagSwitch.on = self.talkingModel.questionEnableTag
+		self.designatedSwitch.on = self.talkingModel.questionDesignated
 	}
 	
 	func prepareData() {

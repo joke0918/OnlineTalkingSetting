@@ -19,7 +19,8 @@ class CloneAllTalkingSettingViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-			self.title = TalkingManager.sharedInstance.talkingModel.name
+			self.title = ""
+//			self.title = TalkingManager.sharedInstance.talkingModel.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -145,7 +146,7 @@ class CloneAllTalkingSettingViewController: UITableViewController {
 extension CloneAllTalkingSettingViewController {
 	// MARK: - Table view delegate
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		self.selectedTalkingListModel = self.talkingListArray[indexPath.row]
+		self.selectedTalkingListModel = self.filteredTalkingListArray[indexPath.row]
 		self.showAlertWithMessage("确认克隆\(self.selectedTalkingListModel!.name)所有信息吗?") {
 			[unowned self]
 			action in
