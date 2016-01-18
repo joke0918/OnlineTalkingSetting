@@ -1366,9 +1366,9 @@
                             <rect key="frame" x="113" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="All"/>
                                 <segment title="Dev"/>
                                 <segment title="Prod"/>
+                                <segment title="All"/>
                             </segments>
                             <connections>
                                 <action selector="filterAction:" destination="MkJ-EK-epb" eventType="valueChanged" id="tfh-bM-uHy"/>

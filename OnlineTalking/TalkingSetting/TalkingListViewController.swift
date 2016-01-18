@@ -65,8 +65,6 @@ class TalkingListViewController: UIViewController {
 	func filterTalkingListArray() {
 		switch self.filterSegmentedControl.selectedSegmentIndex {
 		case 0:
-			self.filteredTalkingListArray = self.talkingListArray
-		case 1:
 			self.filteredTalkingListArray = self.talkingListArray.filter() {
 				if $0.test {
 					return true
@@ -74,7 +72,8 @@ class TalkingListViewController: UIViewController {
 					return false
 				}
 			}
-		case 2:
+			
+		case 1:
 			self.filteredTalkingListArray = self.talkingListArray.filter() {
 				if $0.test{
 					return false
@@ -82,6 +81,10 @@ class TalkingListViewController: UIViewController {
 					return true
 				}
 			}
+		case 2:
+			self.filteredTalkingListArray = self.talkingListArray
+
+			
 		default:
 			return
 		}

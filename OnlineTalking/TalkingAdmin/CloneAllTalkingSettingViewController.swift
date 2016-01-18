@@ -92,23 +92,26 @@ class CloneAllTalkingSettingViewController: UITableViewController {
 	func filterTalkingListArray() {
 		switch self.filterSegmentControl.selectedSegmentIndex {
 		case 0:
-			self.filteredTalkingListArray = self.talkingListArray
+			self.filteredTalkingListArray = self.talkingListArray.filter() {
+				if $0.test {
+					return true
+				} else {
+					return false
+				}
+			}
+			
 		case 1:
 			self.filteredTalkingListArray = self.talkingListArray.filter() {
 				if $0.test {
-					return true
-				} else {
 					return false
+				} else {
+					return true
 				}
 			}
 		case 2:
-			self.filteredTalkingListArray = self.talkingListArray.filter() {
-				if $0.test {
-					return false
-				} else {
-					return true
-				}
-			}
+			self.filteredTalkingListArray = self.talkingListArray
+
+			
 		default:
 			return
 		}
