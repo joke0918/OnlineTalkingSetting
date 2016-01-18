@@ -20,6 +20,34 @@
                ReferencedContainer = "container:OnlineTalking.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "11FE2AF31C44DC76001FEFB2"
+               BuildableName = "OnlineTalkingTests.xctest"
+               BlueprintName = "OnlineTalkingTests"
+               ReferencedContainer = "container:OnlineTalking.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "11FE2AFE1C44DC76001FEFB2"
+               BuildableName = "OnlineTalkingUITests.xctest"
+               BlueprintName = "OnlineTalkingUITests"
+               ReferencedContainer = "container:OnlineTalking.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,26 +56,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11FE2AF31C44DC76001FEFB2"
-               BuildableName = "OnlineTalkingTests.xctest"
-               BlueprintName = "OnlineTalkingTests"
-               ReferencedContainer = "container:OnlineTalking.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "11FE2AFE1C44DC76001FEFB2"
-               BuildableName = "OnlineTalkingUITests.xctest"
-               BlueprintName = "OnlineTalkingUITests"
-               ReferencedContainer = "container:OnlineTalking.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

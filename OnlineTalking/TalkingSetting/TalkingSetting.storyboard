@@ -367,21 +367,28 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="TalkingTemplate" id="7mf-QN-ReM">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rAB-wP-p4N">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="rAB-wP-p4N">
                                         <rect key="frame" x="0.0" y="784" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rAB-wP-p4N" id="eLB-2F-YQd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TalkingTemplate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syC-Cp-lTF">
+                                                    <rect key="frame" x="15" y="12" width="125" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="syC-Cp-lTF" firstAttribute="leading" secondItem="eLB-2F-YQd" secondAttribute="leading" constant="15" id="kgz-L9-phJ"/>
+                                                <constraint firstItem="syC-Cp-lTF" firstAttribute="centerY" secondItem="eLB-2F-YQd" secondAttribute="centerY" id="oo0-11-QG1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tbe-zr-cvU">
-                                        <rect key="frame" x="0.0" y="828" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbe-zr-cvU" id="4XU-7D-Xut">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZV3-f3-cqZ" kind="push" id="R7r-vX-m4w"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -417,6 +424,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFU-Kw-ZKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="547.5" y="870"/>
+        </scene>
+        <!--TalkingTemplate-->
+        <scene sceneID="MQ6-yn-rV0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TalkingTemplate" id="ZV3-f3-cqZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kM0-uQ-izJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZB-gv-UDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787.5" y="869"/>
         </scene>
         <!--Update Registration Setting View Controller-->
         <scene sceneID="2eD-5s-4qY">

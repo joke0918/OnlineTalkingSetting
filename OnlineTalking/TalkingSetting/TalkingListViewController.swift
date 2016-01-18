@@ -24,6 +24,8 @@ class TalkingListViewController: UIViewController {
         // Do any additional setup after loading the view.
 			
 			self.automaticallyAdjustsScrollViewInsets = false
+			
+			
 		}
 
 	override func viewWillAppear(animated: Bool) {
@@ -57,6 +59,8 @@ class TalkingListViewController: UIViewController {
 	@IBAction func filterAction(sender: AnyObject) {
 		self.filterTalkingListArray()
 	}
+	
+	
 	
 	func filterTalkingListArray() {
 		switch self.filterSegmentedControl.selectedSegmentIndex {

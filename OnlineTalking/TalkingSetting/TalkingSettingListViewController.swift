@@ -18,6 +18,12 @@ class TalkingSettingListViewController: UITableViewController {
 		
 		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		let backHomeButton = UIButton(type: .Custom)
+		backHomeButton.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 45)
+		backHomeButton.setTitle("返回主页", forState: .Normal)
+		backHomeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+		backHomeButton.addTarget(self, action: "backHomeAction:", forControlEvents: .TouchUpInside)
+		self.tableView.tableHeaderView = backHomeButton
 	}
 	
 	override func viewWillAppear(animated: Bool) {
@@ -40,6 +46,11 @@ class TalkingSettingListViewController: UITableViewController {
 	// Pass the selected object to the new view controller.
 	}
 	*/
+	
+	func backHomeAction(sender: AnyObject) {
+		self.navigationController!.popToRootViewControllerAnimated(true)
+	}
+	
 	
 	func getTalkingDetails() {
 		let urlString = "http://api.careerfrog.cn/api/talking/\(TalkingManager.sharedInstance.currentTalkingID)/details"

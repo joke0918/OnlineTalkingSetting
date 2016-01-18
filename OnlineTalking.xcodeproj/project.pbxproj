@@ -29,7 +29,6 @@
 		11FE2AEE1C44DC76001FEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AEC1C44DC76001FEFB2 /* LaunchScreen.storyboard */; };
 		11FE2AF91C44DC76001FEFB2 /* OnlineTalkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AF81C44DC76001FEFB2 /* OnlineTalkingTests.swift */; };
 		11FE2B041C44DC76001FEFB2 /* OnlineTalkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2B031C44DC76001FEFB2 /* OnlineTalkingUITests.swift */; };
-		46C86C4BE888DBEB9034DD02 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561B37D20F0C6E075C4F6751 /* Pods.framework */; };
 		764B67A21C4783A700B7859B /* TalkingSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764B679B1C4783A700B7859B /* TalkingSetting.storyboard */; };
 		764B67A31C4783A700B7859B /* TalkingSettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */; };
 		764B67A41C4783A700B7859B /* TalkingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679D1C4783A700B7859B /* TalkingListViewController.swift */; };
@@ -50,10 +49,16 @@
 		764B67BE1C47900500B7859B /* Guests.json in Resources */ = {isa = PBXBuildFile; fileRef = 764B67BD1C47900500B7859B /* Guests.json */; };
 		764B67C01C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */; };
 		765A43341C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */; };
+		767CB0AD1C48FCFE00282FFE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767CB0AC1C48FCFE00282FFE /* Alamofire.framework */; };
+		767CB0AF1C48FD0100282FFE /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767CB0AE1C48FD0100282FFE /* Kingfisher.framework */; };
 		767D3B051C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B041C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift */; };
 		767D3B071C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B061C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift */; };
 		767D3B091C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B081C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift */; };
 		767D3B0B1C48E76F00CB813E /* UpdateExamSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D3B0A1C48E76F00CB813E /* UpdateExamSettingViewController.swift */; };
+		768FD5921C4C89DF005A741E /* AddTalkingSmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FD5911C4C89DF005A741E /* AddTalkingSmsViewController.swift */; };
+		768FD5941C4C8A20005A741E /* AddTalkingEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FD5931C4C8A20005A741E /* AddTalkingEmailViewController.swift */; };
+		768FD5961C4C8FE9005A741E /* TalkingTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FD5951C4C8FE9005A741E /* TalkingTemplateViewController.swift */; };
+		769ADD761C4A9B3A0028109B /* TalkingTemplate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769ADD751C4A9B3A0028109B /* TalkingTemplate.storyboard */; };
 		FBF04128F72B1A9EA4190CDB /* Pods_OnlineTalking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D044D2213CD5EED221EF90E /* Pods_OnlineTalking.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,10 +131,16 @@
 		764B67BD1C47900500B7859B /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
 		764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateRegistrationSettingViewController.swift; path = ../TalkingSetting/UpdateRegistrationSettingViewController.swift; sourceTree = "<group>"; };
 		765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloneAllTalkingSettingViewController.swift; sourceTree = "<group>"; };
+		767CB0AC1C48FCFE00282FFE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		767CB0AE1C48FD0100282FFE /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "Pods/../build/Debug-iphoneos/Kingfisher.framework"; sourceTree = "<group>"; };
 		767D3B041C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateIntroductionSettingViewController.swift; sourceTree = "<group>"; };
 		767D3B061C48D3DC00CB813E /* UpdateQuestionSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateQuestionSettingViewController.swift; sourceTree = "<group>"; };
 		767D3B081C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateQuestionnaireSettingViewController.swift; sourceTree = "<group>"; };
 		767D3B0A1C48E76F00CB813E /* UpdateExamSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateExamSettingViewController.swift; sourceTree = "<group>"; };
+		768FD5911C4C89DF005A741E /* AddTalkingSmsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTalkingSmsViewController.swift; sourceTree = "<group>"; };
+		768FD5931C4C8A20005A741E /* AddTalkingEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTalkingEmailViewController.swift; sourceTree = "<group>"; };
+		768FD5951C4C8FE9005A741E /* TalkingTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingTemplateViewController.swift; sourceTree = "<group>"; };
+		769ADD751C4A9B3A0028109B /* TalkingTemplate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingTemplate.storyboard; sourceTree = "<group>"; };
 		AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA8047AB05EF74F7CCFD1170 /* Pods-OnlineTalking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineTalking.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineTalking/Pods-OnlineTalking.release.xcconfig"; sourceTree = "<group>"; };
 		F0BEFB972E75507C1876636E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +151,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C86C4BE888DBEB9034DD02 /* Pods.framework in Frameworks */,
+				767CB0AF1C48FD0100282FFE /* Kingfisher.framework in Frameworks */,
+				767CB0AD1C48FCFE00282FFE /* Alamofire.framework in Frameworks */,
 				FBF04128F72B1A9EA4190CDB /* Pods_OnlineTalking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +247,7 @@
 				112D70B91C45FFF1008DD268 /* CommonQuestionAdmin */,
 				112D70A41C45F783008DD268 /* ExamAdmin */,
 				764B67841C47791B00B7859B /* TalkingGuestAdmin */,
+				769ADD741C4A9B1D0028109B /* TalkingTemplate */,
 				11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */,
 				11FE2AE51C44DC76001FEFB2 /* ViewController.swift */,
 				764B67AF1C47856A00B7859B /* CommonHelper.swift */,
@@ -267,6 +280,8 @@
 		2BB4D202011B7C617618A647 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				767CB0AE1C48FD0100282FFE /* Kingfisher.framework */,
+				767CB0AC1C48FCFE00282FFE /* Alamofire.framework */,
 				561B37D20F0C6E075C4F6751 /* Pods.framework */,
 				0D044D2213CD5EED221EF90E /* Pods_OnlineTalking.framework */,
 			);
@@ -309,6 +324,17 @@
 				764B67B51C47858200B7859B /* GuestModel.swift */,
 			);
 			path = TalkingGuestAdmin;
+			sourceTree = "<group>";
+		};
+		769ADD741C4A9B1D0028109B /* TalkingTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				769ADD751C4A9B3A0028109B /* TalkingTemplate.storyboard */,
+				768FD5951C4C8FE9005A741E /* TalkingTemplateViewController.swift */,
+				768FD5931C4C8A20005A741E /* AddTalkingEmailViewController.swift */,
+				768FD5911C4C89DF005A741E /* AddTalkingSmsViewController.swift */,
+			);
+			path = TalkingTemplate;
 			sourceTree = "<group>";
 		};
 		DD8870CD59E0F3B806B15864 /* Pods */ = {
@@ -393,6 +419,7 @@
 				TargetAttributes = {
 					11FE2ADF1C44DC75001FEFB2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9G49A29794;
 					};
 					11FE2AF31C44DC76001FEFB2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -436,6 +463,7 @@
 				11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */,
 				112D70C01C45FFF1008DD268 /* CommonQuestion.json in Resources */,
 				764B67BE1C47900500B7859B /* Guests.json in Resources */,
+				769ADD761C4A9B3A0028109B /* TalkingTemplate.storyboard in Resources */,
 				112D70A61C45F78E008DD268 /* ExamAdmin.storyboard in Resources */,
 				764B67B61C47858200B7859B /* TalkingGuestAdmin.storyboard in Resources */,
 				112D70C41C45FFF1008DD268 /* CommonQuestionAdmin.storyboard in Resources */,
@@ -511,12 +539,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768FD5941C4C8A20005A741E /* AddTalkingEmailViewController.swift in Sources */,
 				112D70C11C45FFF1008DD268 /* CommonQuestionCell.swift in Sources */,
 				112D70A81C45F83B008DD268 /* ExamModel.swift in Sources */,
+				768FD5961C4C8FE9005A741E /* TalkingTemplateViewController.swift in Sources */,
 				764B67AC1C47853000B7859B /* CompanyListViewController.swift in Sources */,
 				764B67A81C4783A700B7859B /* TalkingManager.swift in Sources */,
 				764B67B01C47856A00B7859B /* CommonHelper.swift in Sources */,
 				1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */,
+				768FD5921C4C89DF005A741E /* AddTalkingSmsViewController.swift in Sources */,
 				112D70C71C4602E2008DD268 /* UpdateExamViewController.swift in Sources */,
 				767D3B091C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift in Sources */,
 				764B67B71C47858200B7859B /* GuestListViewController.swift in Sources */,
@@ -687,12 +718,19 @@
 			baseConfigurationReference = 4B977DDB04E646738D762CB2 /* Pods-OnlineTalking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.onlinetalkingsetting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1ac2a00b-4c9f-4b26-b669-e3d7e7cb3a78";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
@@ -703,12 +741,19 @@
 			baseConfigurationReference = DA8047AB05EF74F7CCFD1170 /* Pods-OnlineTalking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.onlinetalkingsetting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1ac2a00b-4c9f-4b26-b669-e3d7e7cb3a78";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
