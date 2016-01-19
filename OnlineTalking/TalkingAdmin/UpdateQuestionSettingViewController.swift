@@ -54,6 +54,7 @@ class UpdateQuestionSettingViewController: UIViewController {
 			self.showAlertWithMessage("参数错误")
 			return
 		}
+		
 		let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/\(TalkingManager.sharedInstance.currentTalkingID)/question"
 		request(.PUT, urlString, parameters: result.parameters!, encoding: .JSON, headers: nil).responseJSON() {
 			response in
@@ -61,11 +62,13 @@ class UpdateQuestionSettingViewController: UIViewController {
 				let responseDic = response.result.value as? [String: AnyObject]
 				else {
 					debugPrint(response.result)
-					return }
+					return
+			}
 			
 			guard responseDic["status"] as? String == "SUCCESS" else { return }
 			dispatch_async(dispatch_get_main_queue()) {
 				self.showAlertWithMessage("修改成功") {
+					[unowned self]
 					action in
 					self.navigationController!.popViewControllerAnimated(true)
 				}

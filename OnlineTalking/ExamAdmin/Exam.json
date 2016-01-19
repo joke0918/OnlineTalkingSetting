@@ -9,38 +9,5 @@
  "winnerQuantity" : "5",
  "minutes" : "30",
  "seconds" : "0"
- },
- {
- "question" : "罗兰贝格是在哪一年进入中国市场的？",
- "answer1" : "1967年",
- "answer2" : "1976年",
- "answer3" : "1983年",
- "answer4" : "1990年",
- "correctAnswer" : "C",
- "winnerQuantity" : "5",
- "minutes" : "1",
- "seconds" : "0"
- },
- {
- "question" : "罗兰贝格一共有几个competence center？",
- "answer1" : "8",
- "answer2" : "9",
- "answer3" : "10",
- "answer4" : "11",
- "correctAnswer" : "B",
- "winnerQuantity" : "2",
- "minutes" : "1",
- "seconds" : "30"
- },
- {
- "question" : "罗兰贝格在大中华区有几个办公室？",
- "answer1" : "2",
- "answer2" : "3",
- "answer3" : "4",
- "answer4" : "5",
- "correctAnswer" : "D",
- "winnerQuantity" : "2",
- "minutes" : "2",
- "seconds" : "0"
  }
-]
+ ]

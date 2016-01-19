@@ -19,9 +19,15 @@ class UpdateVideoSettingViewController: UIViewController {
 	
 	@IBOutlet weak var urlTextField: UITextField!
 	
+	@IBOutlet weak var datePickerView: UIView!
+
+	@IBOutlet weak var datePicker: UIDatePicker!
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
+			self.prepareData()
 			self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
@@ -42,6 +48,10 @@ class UpdateVideoSettingViewController: UIViewController {
     }
     */
 
+	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+		self.view.endEditing(true)
+	}
+	
 	@IBAction func confirmAction(sender: AnyObject) {
 		guard let begin = self.beginTextField.text,
 		let end = self.endTextField.text,
@@ -71,6 +81,21 @@ class UpdateVideoSettingViewController: UIViewController {
 		
 	}
 	
+	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
+		
+		self.datePickerView.hidden = true
+		let f = NSDateFormatter()
+		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		if self.beginTextField.isFirstResponder() {
+			self.beginTextField.text = f.stringFromDate(self.datePicker.date)
+		}
+		
+		if self.endTextField.isFirstResponder() {
+			self.endTextField.text = f.stringFromDate(self.datePicker.date)
+		}
+		self.view.endEditing(true)
+	}
+	
 	@IBAction func changeToCurrentTime(sender: AnyObject) {
 		let f = NSDateFormatter()
 		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -86,11 +111,21 @@ class UpdateVideoSettingViewController: UIViewController {
 		self.endTextField.text = self.talkingModel.videoEndString
 		self.urlTextField.text = self.talkingModel.videoUrl
 	}
-
+	
+	func prepareData() {
+		let date = NSDate()
+		self.datePicker.minimumDate = NSDate(timeInterval: -60 * 60, sinceDate: date)
+		self.datePicker.maximumDate = NSDate(timeInterval: 365 * 24 * 60 * 60, sinceDate: date)
+		
+	}
 	
 }
 
-
+extension UpdateVideoSettingViewController: UITextFieldDelegate {
+	func textFieldDidBeginEditing(textField: UITextField) {
+		self.datePickerView.hidden = false
+	}
+}
 
 
 

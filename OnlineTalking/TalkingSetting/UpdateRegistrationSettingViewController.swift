@@ -55,6 +55,7 @@ class UpdateRegistrationSettingViewController: UIViewController {
 			guard responseDic["status"] as? String == "SUCCESS" else { return }
 			dispatch_async(dispatch_get_main_queue()) {
 				self.showAlertWithMessage("修改成功") {
+					[unowned self]
 					action in
 					self.navigationController!.popViewControllerAnimated(true)
 				}

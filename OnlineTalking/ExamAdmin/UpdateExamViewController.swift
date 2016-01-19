@@ -85,10 +85,16 @@ class UpdateExamViewController: UIViewController {
     let urlString = "http://api.careerfrog.cn/api/exam-admin/376D71EA-858A081C/add"
     request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
       response in
-      guard response.result.isSuccess == true else {
-        debugPrint(response.result)
-        return
-      }
+			guard response.result.isSuccess == true,
+				let responseDic = response.result.value as? [String: AnyObject]
+				else {
+					debugPrint(response.result)
+					return
+			}
+			guard responseDic["status"] as? String == "SUCCESS" else {
+				debugPrint(responseDic)
+				return
+			}
       dispatch_async(dispatch_get_main_queue()) {
         self.navigationController!.popViewControllerAnimated(true)
       }
@@ -99,10 +105,16 @@ class UpdateExamViewController: UIViewController {
     let urlString = "http://api.careerfrog.cn/api/exam-admin/376D71EA-858A081C/\(self.examModel.examId)"
     request(.PUT, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
       response in
-      guard response.result.isSuccess == true else {
-        debugPrint(response.result)
-        return
-      }
+			guard response.result.isSuccess == true,
+				let responseDic = response.result.value as? [String: AnyObject]
+				else {
+					debugPrint(response.result)
+					return
+			}
+			guard responseDic["status"] as? String == "SUCCESS" else {
+				debugPrint(responseDic)
+				return
+			}
       dispatch_async(dispatch_get_main_queue()) {
         self.navigationController!.popViewControllerAnimated(true)
       }

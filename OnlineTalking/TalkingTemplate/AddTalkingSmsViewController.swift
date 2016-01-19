@@ -27,7 +27,7 @@ class AddTalkingSmsViewController: UIViewController {
 		super.viewWillAppear(animated)
 		if name == "template.notification.user" {
 			self.valuesTextField.text = "online_talk_name,online_talk_time,online_talk_link"
-			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】你预约的{online_talk_name}将于{online_talk_time}开幕，请登录 {online_talk_link} 收看"
+			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】你预约的{online_talk_name}将于北京时间{online_talk_time}开幕。为了保证最佳收看效果，建议通过PC端登录 {online_talk_link} 收看。"
 		}
 		if name == "template.notification.question.answered" {
 			self.valuesTextField.text = "name,question_short,question_url"

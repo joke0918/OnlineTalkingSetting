@@ -58,6 +58,7 @@ class UpdateQuestionnaireSettingViewController: UIViewController {
 			guard responseDic["status"] as? String == "SUCCESS" else { return }
 			dispatch_async(dispatch_get_main_queue()) {
 				self.showAlertWithMessage("修改成功") {
+					[unowned self]
 					action in
 					self.navigationController!.popViewControllerAnimated(true)
 				}
@@ -66,7 +67,8 @@ class UpdateQuestionnaireSettingViewController: UIViewController {
 	}
 	
 	func fillDataForUI() {
-		if talkingModel.questionnaireUrl != defaultUrl {
+		
+		if talkingModel.questionnaireUrl != "" {
 			self.urlTextField.text = self.talkingModel.questionnaireUrl
 			self.mobileUrlTextField.text = self.talkingModel.questionnaireMobileUrl
 			

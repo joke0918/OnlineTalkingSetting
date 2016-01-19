@@ -27,12 +27,12 @@ class AddTalkingEmailViewController: UIViewController {
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		if name == "template.register.user" {
-			self.titleTextField.text = "你已成功报名「{online_talk_name}」，请于{online_talk_time}登录 {online_talk_link}收看宣讲会"
-			self.contentTextField.text = "<p>你已成功报名「{online_talk_name}」，请于{online_talk_time}登录 {online_talk_link}收看宣讲会</p><p>{online_talk_short}</p>"
+			self.titleTextField.text = "你已成功报名「{online_talk_name}」"
+			self.contentTextField.text = "<p>亲爱的同学，</p><p>你已成功报名「{online_talk_name}」，请于北京时间{online_talk_time}登录 {online_talk_link} 收看宣讲会。PC端和移动端都支持，但为了保证最佳收看效果，我们建议你使用PC端参与。</p><p>{online_talk_short}</p>"
 		}
 		if name == "template.notification.user" {
-			self.titleTextField.text = "【{online_talk_short}】你预约的{online_talk_name}将于{online_talk_time}开幕，期待你的参与"
-			self.contentTextField.text = "<p>你预约的{online_talk_name}将于{online_talk_time}开幕，请登录 {online_talk_link} 收看</p><p>祝应聘成功<br>{online_talk_short}</p>"
+			self.titleTextField.text = "【{online_talk_short}】你预约的{online_talk_name}将于北京时间{online_talk_time}开幕，期待你的参与"
+			self.contentTextField.text = "<p>亲爱的同学，</p><p>你预约的{online_talk_name}将于北京时间{online_talk_time}开幕，请登录 {online_talk_link} 收看。PC端和移动端都支持，但为了保证最佳收看效果，我们建议你使用PC端参与。</p><p>祝应聘成功<br>{online_talk_short}</p>"
 		}
 		if name == "template.notification.question.answered" {
 			self.titleTextField.text = "【{online_talk_short}】你在{name}空中宣讲会提交的提问「{question_short}」已被解答！"

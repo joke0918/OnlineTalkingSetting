@@ -904,6 +904,9 @@
                                                 <rect key="frame" x="50" y="0.0" width="295" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="5Cg-Zc-u3L" id="6x1-AY-E9C"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -926,6 +929,9 @@
                                                 <rect key="frame" x="50" y="0.0" width="295" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="5Cg-Zc-u3L" id="aG6-bQ-pIN"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -981,11 +987,42 @@
                                     <action selector="changeToCurrentTime:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="xM4-YW-J45"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3v-JO-2kc">
+                                <rect key="frame" x="0.0" y="417" width="375" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9h-YP-lem">
+                                        <rect key="frame" x="330" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="确定"/>
+                                        <connections>
+                                            <action selector="datePickerViewConfirmAction:" destination="7KZ-PP-x5L" eventType="touchUpInside" id="1Ex-fj-xZj"/>
+                                            <action selector="datePickerViewConfirmAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="Cif-Eh-U0Q"/>
+                                            <action selector="datePickerViewConfirmAction:" destination="F4d-7h-nTt" eventType="touchUpInside" id="nFM-Qp-Vfd"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pla-pA-psc">
+                                        <rect key="frame" x="0.0" y="34" width="375" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="474536319.43040198">
+                                            <!--2016-01-15 07:38:39 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pla-pA-psc" secondAttribute="bottom" id="GlJ-gs-j6z"/>
+                                    <constraint firstItem="y9h-YP-lem" firstAttribute="top" secondItem="W3v-JO-2kc" secondAttribute="top" id="Pxw-aB-2oD"/>
+                                    <constraint firstAttribute="trailing" secondItem="pla-pA-psc" secondAttribute="trailing" id="YV4-KP-agH"/>
+                                    <constraint firstAttribute="height" constant="250" id="efM-AO-Sco"/>
+                                    <constraint firstItem="pla-pA-psc" firstAttribute="leading" secondItem="W3v-JO-2kc" secondAttribute="leading" id="iM1-fT-xb7"/>
+                                    <constraint firstAttribute="trailing" secondItem="y9h-YP-lem" secondAttribute="trailing" constant="15" id="iRe-K3-SX6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jtJ-Jk-QGK" firstAttribute="top" secondItem="7lQ-iv-xoo" secondAttribute="bottom" constant="40" id="3L2-Nf-qFY"/>
                             <constraint firstItem="mru-Jt-G6z" firstAttribute="top" secondItem="m9u-K2-Ifq" secondAttribute="bottom" constant="10" id="5GX-YA-moY"/>
+                            <constraint firstItem="W3v-JO-2kc" firstAttribute="leading" secondItem="fAC-DU-CoN" secondAttribute="leading" id="87L-Zo-4eh"/>
+                            <constraint firstAttribute="trailing" secondItem="W3v-JO-2kc" secondAttribute="trailing" id="Fgr-io-gjM"/>
+                            <constraint firstItem="uWQ-Wh-EYD" firstAttribute="top" secondItem="W3v-JO-2kc" secondAttribute="bottom" id="OKD-hs-5lm"/>
                             <constraint firstItem="m9u-K2-Ifq" firstAttribute="top" secondItem="jtJ-Jk-QGK" secondAttribute="bottom" constant="25" id="QNs-38-LL7"/>
                             <constraint firstItem="m9u-K2-Ifq" firstAttribute="centerX" secondItem="fAC-DU-CoN" secondAttribute="centerX" id="dXM-2Y-MF7"/>
                             <constraint firstItem="jtJ-Jk-QGK" firstAttribute="leading" secondItem="fAC-DU-CoN" secondAttribute="leading" constant="15" id="dfg-JY-WOd"/>
@@ -997,6 +1034,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="beginTextField" destination="X5w-vl-ugS" id="4Uo-da-nV6"/>
+                        <outlet property="datePicker" destination="pla-pA-psc" id="45O-Yn-30J"/>
+                        <outlet property="datePickerView" destination="W3v-JO-2kc" id="FVn-7N-oZV"/>
                         <outlet property="endTextField" destination="33x-nE-CgO" id="CaD-jB-VeI"/>
                         <outlet property="urlTextField" destination="PJ9-wc-dgA" id="P1s-Yz-hBs"/>
                     </connections>
@@ -1062,9 +1101,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klT-Gn-660">
-                                                <rect key="frame" x="48" y="0.0" width="297" height="30"/>
+                                                <rect key="frame" x="47" y="0.0" width="298" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="F4d-7h-nTt" id="7OF-EI-FJT"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1081,6 +1123,9 @@
                                                 <rect key="frame" x="34" y="0.0" width="311" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="F4d-7h-nTt" id="JaF-ra-rPK"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1094,7 +1139,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9VO-7j-ImR">
-                                                <rect key="frame" x="84" y="0.0" width="261" height="30"/>
+                                                <rect key="frame" x="83" y="0.0" width="262" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1159,14 +1204,45 @@
                                     <action selector="confirmAction:" destination="F4d-7h-nTt" eventType="touchUpInside" id="uDS-1R-L1E"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-dz-zhf">
+                                <rect key="frame" x="0.0" y="417" width="375" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLy-ZH-Hdc">
+                                        <rect key="frame" x="330" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="确定"/>
+                                        <connections>
+                                            <action selector="datePickerViewConfirmAction:" destination="F4d-7h-nTt" eventType="touchUpInside" id="mKY-lu-DOd"/>
+                                            <action selector="datePickerViewConfirmAction:" destination="7KZ-PP-x5L" eventType="touchUpInside" id="p1h-qj-v70"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-AB-uAR">
+                                        <rect key="frame" x="0.0" y="34" width="375" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="474536319.43040198">
+                                            <!--2016-01-15 07:38:39 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="N2m-fp-qRd"/>
+                                    <constraint firstItem="jjt-AB-uAR" firstAttribute="leading" secondItem="UO2-dz-zhf" secondAttribute="leading" id="edo-hU-1df"/>
+                                    <constraint firstAttribute="bottom" secondItem="jjt-AB-uAR" secondAttribute="bottom" id="pJB-oo-gdD"/>
+                                    <constraint firstAttribute="trailing" secondItem="jjt-AB-uAR" secondAttribute="trailing" id="qBi-s7-rvg"/>
+                                    <constraint firstAttribute="trailing" secondItem="DLy-ZH-Hdc" secondAttribute="trailing" constant="15" id="qDa-C1-OFK"/>
+                                    <constraint firstItem="DLy-ZH-Hdc" firstAttribute="top" secondItem="UO2-dz-zhf" secondAttribute="top" id="rUi-ju-wiO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UO2-dz-zhf" secondAttribute="trailing" id="BtF-GQ-yth"/>
+                            <constraint firstItem="UO2-dz-zhf" firstAttribute="leading" secondItem="rat-fm-wUS" secondAttribute="leading" id="Kz8-DC-FsL"/>
                             <constraint firstItem="dRr-gf-CM3" firstAttribute="centerX" secondItem="rat-fm-wUS" secondAttribute="centerX" id="M4A-6m-ohD"/>
                             <constraint firstItem="QAU-Fj-rAe" firstAttribute="centerX" secondItem="rat-fm-wUS" secondAttribute="centerX" id="PbG-do-zjI"/>
                             <constraint firstItem="QAU-Fj-rAe" firstAttribute="top" secondItem="dRr-gf-CM3" secondAttribute="bottom" constant="15" id="Pdn-af-yKJ"/>
                             <constraint firstItem="sET-fa-E4E" firstAttribute="top" secondItem="Xdd-yu-Axg" secondAttribute="bottom" constant="20" id="Vl6-fr-Tap"/>
                             <constraint firstItem="sET-fa-E4E" firstAttribute="leading" secondItem="rat-fm-wUS" secondAttribute="leading" constant="15" id="XeF-Up-Oh8"/>
+                            <constraint firstItem="Q67-bF-QLj" firstAttribute="top" secondItem="UO2-dz-zhf" secondAttribute="bottom" id="eQe-SJ-1XB"/>
                             <constraint firstAttribute="trailing" secondItem="sET-fa-E4E" secondAttribute="trailing" constant="15" id="tBv-wJ-ft4"/>
                             <constraint firstItem="dRr-gf-CM3" firstAttribute="top" secondItem="sET-fa-E4E" secondAttribute="bottom" constant="21" id="tnM-MZ-vfD"/>
                         </constraints>
@@ -1176,6 +1252,8 @@
                     <connections>
                         <outlet property="applyUrlTextField" destination="hDK-2c-I4J" id="Df6-wc-nG9"/>
                         <outlet property="beginTextField" destination="klT-Gn-660" id="dfP-Q8-YJ6"/>
+                        <outlet property="datePicker" destination="jjt-AB-uAR" id="35C-b2-odK"/>
+                        <outlet property="datePickerView" destination="UO2-dz-zhf" id="g9G-Xb-chA"/>
                         <outlet property="domainUrlTextField" destination="9VO-7j-ImR" id="MlH-9N-GaL"/>
                         <outlet property="endTextField" destination="01v-g5-m9s" id="lKP-kj-OoT"/>
                         <outlet property="mobileApplyUrlTextField" destination="Xxi-b3-iG2" id="Dle-yr-TZb"/>

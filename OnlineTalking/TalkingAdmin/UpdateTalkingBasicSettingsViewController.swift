@@ -18,11 +18,16 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   @IBOutlet weak var domainUrlTextField: UITextField!
   @IBOutlet weak var applyUrlTextField: UITextField!
   @IBOutlet weak var mobileApplyUrlTextField: UITextField!
+	
+	@IBOutlet weak var datePickerView: UIView!
+	
+	@IBOutlet weak var datePicker: UIDatePicker!
 	var talkingModel: TalkingModel!
   
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
+			self.prepareData()
       self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
@@ -45,6 +50,11 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   
   override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     self.view.endEditing(true)
+		if !self.datePickerView.hidden {
+			UIView.animateWithDuration(0.5) {
+				self.datePickerView.hidden = true
+			}
+		}
   }
   
   @IBAction func confirmAction(sender: AnyObject) {
@@ -64,9 +74,13 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
           return }
       
       guard responseDic["status"] as? String == "SUCCESS" else { return }
-      dispatch_async(dispatch_get_main_queue()) {
-        self.navigationController!.popViewControllerAnimated(true)
-      }
+			dispatch_async(dispatch_get_main_queue()) {
+				self.showAlertWithMessage("修改成功") {
+					[unowned self]
+					action in
+					self.navigationController!.popViewControllerAnimated(true)
+				}
+			}
     }
   }
   
@@ -77,7 +91,22 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
     self.beginTextField.text = f.stringFromDate(date)
     self.endTextField.text = f.stringFromDate(date)
   }
-  
+	
+	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
+		let f = NSDateFormatter()
+		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		let date = f.stringFromDate(self.datePicker.date)
+		if self.beginTextField.isFirstResponder() {
+			self.beginTextField.text = date
+		}
+		if self.endTextField.isFirstResponder() {
+			self.endTextField.text = date
+		}
+		UIView.animateWithDuration(0.5) {
+			self.datePickerView.hidden = true
+		}
+	}
+	
   func fillDataForUI() {
     self.nameTextField.text = self.talkingModel.name
 		self.shortNameTextField.text = self.talkingModel.shortName
@@ -110,10 +139,23 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
     ]
     return (dic, true)
   }
-  
+	
+	func prepareData() {
+		self.datePicker.minimumDate = NSDate()
+		self.datePicker.maximumDate = NSDate(timeInterval: 365 * 24 * 60 * 60, sinceDate: NSDate())
+	}
+	
 }
 
-
+extension UpdateTalkingBasicSettingsViewController: UITextFieldDelegate {
+	func textFieldDidBeginEditing(textField: UITextField) {
+		if !self.datePickerView.hidden {
+			return
+		}
+		UIView.animateWithDuration(0.5) {
+			self.datePickerView.hidden = false
+		}	}
+}
 
 
 

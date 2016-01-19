@@ -24,7 +24,7 @@ class ExamListViewController: UITableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      self.tableView.estimatedRowHeight = 180
+      self.tableView.estimatedRowHeight = 150
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -125,7 +125,10 @@ class ExamListViewController: UITableViewController {
       
       guard responseDic["status"] as? String == "SUCCESS",
         let array = responseDic["result"] as? [[String: AnyObject]]
-        else { return }
+        else {
+					debugPrint(responseDic)
+					return
+			}
       self.examListArray.removeAll()
       for examDic in array {
         let model = ExamModel(dic: examDic)
@@ -169,7 +172,8 @@ class ExamListViewController: UITableViewController {
           let responseDic = response.result.value as? [String: AnyObject]
           else {
             debugPrint(response.result)
-            return }
+            return
+				}
         
         guard responseDic["status"] as? String == "SUCCESS" else { return }
         self.committingExamCount--
