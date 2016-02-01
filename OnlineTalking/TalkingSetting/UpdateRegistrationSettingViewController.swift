@@ -18,7 +18,7 @@ class UpdateRegistrationSettingViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 

@@ -28,15 +28,25 @@ class AddTalkingSmsViewController: UIViewController {
 		if name == "template.notification.user" {
 			self.valuesTextField.text = "online_talk_name,online_talk_time,online_talk_link"
 			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】你预约的{online_talk_name}将于北京时间{online_talk_time}开幕。为了保证最佳收看效果，建议通过PC端登录 {online_talk_link} 收看。"
+			self.title = "开始前一天短信"
 		}
 		if name == "template.notification.question.answered" {
 			self.valuesTextField.text = "name,question_short,question_url"
 			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】你在{name}空中宣讲会提交的提问「{question_short}」已被解答！详见：{question_url}"
+			self.title = "问题回答短信"
 		}
 		if name == "template.user.find.name" {
 			self.valuesTextField.text = "username"
 			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】你的登录名为：{username}"
+			self.title = "找回登录名短信"
 		}
+		
+		if name == "template.exam.winner.user" {
+			self.valuesTextField.text = "online_talk_name"
+			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】若你获得了「{online_talk_name}」直通券，请务必在24小时内完成网申！"
+			self.title = "直通券短信"
+		}
+		
 	}
 	
     override func didReceiveMemoryWarning() {

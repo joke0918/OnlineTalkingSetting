@@ -386,7 +386,13 @@
                             <outlet property="delegate" destination="G6D-0c-yYo" id="5F9-Qm-LwF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JVr-sZ-mJt"/>
+                    <navigationItem key="navigationItem" id="JVr-sZ-mJt">
+                        <barButtonItem key="rightBarButtonItem" title="Safari" id="e3d-PP-DEV">
+                            <connections>
+                                <action selector="openInSafariAction:" destination="G6D-0c-yYo" id="4AU-uX-Az1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fo7-MJ-Ybv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -661,14 +667,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-Lv-xlf">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-67-rAV">
                                                 <rect key="frame" x="60" y="0.0" width="285" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="7KZ-PP-x5L" id="pI9-Vg-d8C"/>
+                                                    <action selector="beginAction:" destination="7KZ-PP-x5L" eventType="touchUpInside" id="GPo-Qd-3i4"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcp-1S-5yq">
@@ -680,14 +684,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qL4-Me-ERJ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0b-sx-TVU">
                                                 <rect key="frame" x="46" y="0.0" width="299" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="7KZ-PP-x5L" id="HrS-Sh-eOd"/>
+                                                    <action selector="endAction:" destination="7KZ-PP-x5L" eventType="touchUpInside" id="Df5-gP-PHr"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGH-4p-YG4">
@@ -714,7 +716,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U1f-6B-DOS">
-                                                <rect key="frame" x="102" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="103" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -774,12 +776,12 @@
                     <navigationItem key="navigationItem" id="MuM-RY-JPx"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="beginTextField" destination="zdE-Lv-xlf" id="82J-Jy-7Va"/>
+                        <outlet property="beginButton" destination="hj0-67-rAV" id="f1R-mi-f60"/>
                         <outlet property="datePicker" destination="Ndl-RN-hfG" id="7uG-2s-tfU"/>
                         <outlet property="datePickerView" destination="QCQ-MY-Cd1" id="TIu-t2-tS2"/>
                         <outlet property="designatedSwitch" destination="U1f-6B-DOS" id="M4r-3V-UxL"/>
                         <outlet property="enableTagSwitch" destination="6UF-QC-Abd" id="x4Q-oo-WK3"/>
-                        <outlet property="endTextField" destination="qL4-Me-ERJ" id="deR-CY-bdG"/>
+                        <outlet property="endButton" destination="A0b-sx-TVU" id="Rct-KF-kSq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpp-Fk-YdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -876,7 +878,7 @@
         <!--Update Video Setting View Controller-->
         <scene sceneID="Dkc-wV-DUJ">
             <objects>
-                <viewController id="5Cg-Zc-u3L" customClass="UpdateVideoSettingViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateVideoSettingViewController" id="5Cg-Zc-u3L" customClass="UpdateVideoSettingViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7lQ-iv-xoo"/>
                         <viewControllerLayoutGuide type="bottom" id="uWQ-Wh-EYD"/>
@@ -900,14 +902,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="开始时间" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="X5w-vl-ugS">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-Tq-8cx">
                                                 <rect key="frame" x="50" y="0.0" width="295" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="5Cg-Zc-u3L" id="6x1-AY-E9C"/>
+                                                    <action selector="beginAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="dzR-d7-uum"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YmU-TW-ted"/>
@@ -925,14 +925,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="结束时间" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="33x-nE-CgO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GI-vX-BEE">
                                                 <rect key="frame" x="50" y="0.0" width="295" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="5Cg-Zc-u3L" id="aG6-bQ-pIN"/>
+                                                    <action selector="endAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="Ug7-3v-Rmm"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="v0k-SB-5u9"/>
@@ -1033,10 +1031,10 @@
                     <navigationItem key="navigationItem" id="cgl-gu-qzd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="beginTextField" destination="X5w-vl-ugS" id="4Uo-da-nV6"/>
+                        <outlet property="beginButton" destination="1hy-Tq-8cx" id="BtE-rG-34s"/>
                         <outlet property="datePicker" destination="pla-pA-psc" id="45O-Yn-30J"/>
                         <outlet property="datePickerView" destination="W3v-JO-2kc" id="FVn-7N-oZV"/>
-                        <outlet property="endTextField" destination="33x-nE-CgO" id="CaD-jB-VeI"/>
+                        <outlet property="endButton" destination="3GI-vX-BEE" id="CZq-UD-oPI"/>
                         <outlet property="urlTextField" destination="PJ9-wc-dgA" id="P1s-Yz-hBs"/>
                     </connections>
                 </viewController>
@@ -1100,14 +1098,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klT-Gn-660">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-2d-3O7">
                                                 <rect key="frame" x="47" y="0.0" width="298" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="F4d-7h-nTt" id="7OF-EI-FJT"/>
+                                                    <action selector="beginAction:" destination="F4d-7h-nTt" eventType="touchUpInside" id="Eyc-RQ-qiA"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBn-Ax-Oye">
@@ -1119,14 +1115,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="01v-g5-m9s">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-FH-O3I">
                                                 <rect key="frame" x="34" y="0.0" width="311" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="F4d-7h-nTt" id="JaF-ra-rPK"/>
+                                                    <action selector="endAction:" destination="F4d-7h-nTt" eventType="touchUpInside" id="RvM-oG-yVz"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QX-20-05o">
@@ -1251,11 +1245,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="applyUrlTextField" destination="hDK-2c-I4J" id="Df6-wc-nG9"/>
-                        <outlet property="beginTextField" destination="klT-Gn-660" id="dfP-Q8-YJ6"/>
+                        <outlet property="beginButton" destination="Avr-2d-3O7" id="tkY-VB-4gs"/>
                         <outlet property="datePicker" destination="jjt-AB-uAR" id="35C-b2-odK"/>
                         <outlet property="datePickerView" destination="UO2-dz-zhf" id="g9G-Xb-chA"/>
                         <outlet property="domainUrlTextField" destination="9VO-7j-ImR" id="MlH-9N-GaL"/>
-                        <outlet property="endTextField" destination="01v-g5-m9s" id="lKP-kj-OoT"/>
+                        <outlet property="endButton" destination="m7b-FH-O3I" id="5JQ-vt-pAv"/>
                         <outlet property="mobileApplyUrlTextField" destination="Xxi-b3-iG2" id="Dle-yr-TZb"/>
                         <outlet property="nameTextField" destination="cYV-SS-omp" id="X9u-4N-lEL"/>
                         <outlet property="shortNameTextField" destination="Oal-jo-b5E" id="AxJ-x3-Fqy"/>
@@ -1517,6 +1511,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGI-Jo-ZbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bcO-CK-qZr">
+                    <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </button>
             </objects>
             <point key="canvasLocation" x="1951.5" y="-403.5"/>
         </scene>

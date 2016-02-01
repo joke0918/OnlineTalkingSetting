@@ -42,6 +42,20 @@ class UpdateGuestViewController: UIViewController {
 		self.view.endEditing(true)
 	}
 
+
+	@IBAction func adminAction(sender: AnyObject) {
+		self.userTextField.text = "admin"
+		self.passTextField.text = "admin"
+		self.usernameTextField.text = "admin"
+		self.nicknameTextField.text = "admin"
+		self.positionTextField.text = "admin"
+		self.avatarUrlTextField.text = ""
+		self.adminSwitch.on = true
+		self.displaySwitch.on = false
+		self.orderTextField.text = "0"
+	}
+	
+	
 	@IBAction func confirmAction(sender: AnyObject) {
 		guard let username = self.usernameTextField.text,
 			let nickname = self.nicknameTextField.text,

@@ -1,0 +1,18 @@
+{
+	"template.exam.winner.user" : {
+		"content" : "",
+		"title" : ""
+	},
+	"template.notification.question.answered" : {
+		"content" : "<p>亲爱的同学，<p>你在通用电气2017校招——EEDP/SDLP宣讲会专场提交的提问已被解答！</p><p>问题描述:</p><p>{question}</p><p>解答如下:</p><p>{answer}</p><p>祝应聘成功</p><p>{online_talk_short}</p>",
+		"title" : "<p>【{online_talk_short}】你在通用电气2017校招——EEDP/SDLP宣讲会专场提交的提问「{question_short}」已被解答！</p>"
+	},
+	"template.notification.user" : {
+		"content" : "<p>亲爱的同学，</p><p>你预约的{online_talk_name}将于北京时间{online_talk_time}开幕，请登录{online_talk_link}收看。PC端和移动端都支持，但为了保证最佳收看效果，我们建议你使用PC端参与。</p><p>祝应聘成功</p><p>{online_talk_short}</p>",
+		"title" : "<p>【{online_talk_short}】你预约的{online_talk_name}将于北京时间{online_talk_time}开幕，期待你的参与</p>"
+	},
+	"template.register.user" : {
+		"content" : "<p>亲爱的同学，</p><p>你已成功报名「{online_talk_name}」，请于北京时间{online_talk_time}登录{online_talk_link}收看宣讲会。PC端和移动端都支持，但为了保证最佳收看效果，我们建议你使用PC端参与。</p><p>{online_talk_short}</p>",
+		"title" : "<p>你已成功报名「{online_talk_name}」</p>"
+	}
+}

@@ -23,7 +23,7 @@ class UpdateIntroductionSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
-			
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 

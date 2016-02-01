@@ -8,7 +8,7 @@
         <!--Talking Details View Controller-->
         <scene sceneID="xec-Ww-UYA">
             <objects>
-                <viewController id="5sW-E1-MDI" customClass="TalkingDetailsViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TalkingDetailsViewController" id="5sW-E1-MDI" customClass="TalkingDetailsViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ikP-b3-pqU"/>
                         <viewControllerLayoutGuide type="bottom" id="A0D-gH-6Vw"/>

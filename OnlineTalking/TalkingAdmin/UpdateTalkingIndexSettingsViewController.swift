@@ -21,6 +21,7 @@ class UpdateTalkingIndexSettingsViewController: UIViewController {
         super.viewDidLoad()
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
       self.fillDataForUI()
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 

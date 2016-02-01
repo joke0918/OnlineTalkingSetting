@@ -18,6 +18,9 @@ class TalkingSettingListViewController: UITableViewController {
 		
 		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 		// self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		if self.traitCollection.forceTouchCapability == .Available {
+			self.registerForPreviewingWithDelegate(self, sourceView: view)
+		}
 		let backHomeButton = UIButton(type: .Custom)
 		backHomeButton.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 45)
 		backHomeButton.setTitle("返回主页", forState: .Normal)
@@ -47,6 +50,10 @@ class TalkingSettingListViewController: UITableViewController {
 	}
 	*/
 	
+	@IBAction func openInSafariAction(sender: AnyObject) {
+		UIApplication.sharedApplication().openURL(NSURL(string: TalkingManager.sharedInstance.talkingModel.domainUrl)!)
+	}
+	
 	func backHomeAction(sender: AnyObject) {
 		self.navigationController!.popToRootViewControllerAnimated(true)
 	}
@@ -73,6 +80,51 @@ class TalkingSettingListViewController: UITableViewController {
 	}
 	
 }
+
+extension TalkingSettingListViewController: UIViewControllerPreviewingDelegate {
+	func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+		guard let indexPath = self.tableView.indexPathForRowAtPoint(location),
+			let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+		else { return nil }
+		
+		if indexPath.section == 0 && indexPath.row == 6 {
+			
+			let identifer = "UpdateVideoSettingViewController"
+			let talkingStoryboard = UIStoryboard(name: "TalkingSetting", bundle: nil)
+			guard let vc = talkingStoryboard.instantiateViewControllerWithIdentifier(identifer) as? UpdateVideoSettingViewController else { return nil }
+			let frame = cell.frame
+			previewingContext.sourceRect = frame
+			return vc
+		}
+		
+		if indexPath.section == 1 && indexPath.row == 0 {
+			let identifer = "TalkingDetailsViewController"
+			let talkingStoryboard = UIStoryboard(name: "Talking", bundle: nil)
+			guard let vc = talkingStoryboard.instantiateViewControllerWithIdentifier(identifer) as? TalkingDetailsViewController else { return nil }
+			let frame = cell.frame
+			previewingContext.sourceRect = frame
+			return vc
+		}
+		
+		if indexPath.section == 2 && indexPath.row == 0 {
+			let identifer = "GuestListViewController"
+			let talkingStoryboard = UIStoryboard(name: "TalkingGuestAdmin", bundle: nil)
+			guard let vc = talkingStoryboard.instantiateViewControllerWithIdentifier(identifer) as? GuestListViewController else { return nil }
+			let frame = cell.frame
+			previewingContext.sourceRect = frame
+			return vc
+		}
+		return nil
+
+	}
+	
+	func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+		self.showViewController(viewControllerToCommit, sender: self)
+	}
+	
+}
+
+
 
 
 

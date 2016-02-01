@@ -18,12 +18,24 @@ class CompanyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.automaticallyAdjustsScrollViewInsets = false
+			UIApplication.sharedApplication().keyWindow!.backgroundColor = UIColor.whiteColor()
+			
+			NSNotificationCenter.defaultCenter().addObserverForName("LoginSuccess", object: nil, queue: NSOperationQueue.mainQueue()) {
+				noti in
+				self.getCompanies()
+			}
+			
 //			self.getCompanies()
 
 //			self.tableView.registerClass(CompanyListCell.classForCoder(), forCellReuseIdentifier: "CompanyListCell")
         // Do any additional setup after loading the view.
     }
 
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.getCompanies()
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,10 +48,12 @@ class CompanyListViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-			guard let indexPath = self.tableView.indexPathForSelectedRow else { return }
+			guard let indexPath = self.tableView.indexPathForSelectedRow,
+				let vc = segue.destinationViewController as? TalkingListViewController
+			else { return }
 			let companyModel = self.companyListArray[indexPath.row]
 			TalkingManager.sharedInstance.currentCompanyID = companyModel.companyId
-			
+			vc.hidesBottomBarWhenPushed = true
     }
 
 	@IBAction func loginAction(sender: AnyObject) {

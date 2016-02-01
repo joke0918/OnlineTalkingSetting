@@ -11,9 +11,19 @@ import Alamofire
 
 class UpdateQuestionSettingViewController: UIViewController {
 
-	@IBOutlet weak var beginTextField: UITextField!
+	@IBOutlet weak var beginButton: UIButton! {
+		didSet {
+			self.beginButton.addDefaultCornerRadius()
+		}
+	}
 	
-	@IBOutlet weak var endTextField: UITextField!
+	
+	@IBOutlet weak var endButton: UIButton! {
+		didSet {
+			self.endButton.addDefaultCornerRadius()
+		}
+	}
+	
 	
 	@IBOutlet weak var enableTagSwitch: UISwitch!
 	
@@ -29,6 +39,7 @@ class UpdateQuestionSettingViewController: UIViewController {
         super.viewDidLoad()
 			self.prepareData()
 			self.fillDataForUI()
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 
@@ -47,6 +58,19 @@ class UpdateQuestionSettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+	
+	
+	@IBAction func beginAction(sender: AnyObject) {
+		self.datePickerView.hidden = false
+		self.beginButton.selected = true
+		self.endButton.selected = false
+	}
+	
+	@IBAction func endAction(sender: AnyObject) {
+		self.datePickerView.hidden = false
+		self.endButton.selected = true
+		self.beginButton.selected = false
+	}
 	
 	@IBAction func confirmAction(sender: AnyObject) {
 		let result = self.generateParameters()
@@ -77,21 +101,23 @@ class UpdateQuestionSettingViewController: UIViewController {
 	}
 	
 	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
-		self.datePickerView.hidden = !self.datePickerView.hidden
 		let f = NSDateFormatter()
 		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		if self.beginTextField.isFirstResponder() {
-			self.beginTextField.text = f.stringFromDate(self.datePicker.date)
+		let date = f.stringFromDate(self.datePicker.date)
+		if self.beginButton.selected {
+			self.beginButton.setTitle(date, forState: .Normal)
 		}
-		
-		if self.endTextField.isFirstResponder() {
-			self.endTextField.text = f.stringFromDate(self.datePicker.date)
+		if self.endButton.selected {
+			self.endButton.setTitle(date, forState: .Normal)
+		}
+		UIView.animateWithDuration(0.5) {
+			self.datePickerView.hidden = true
 		}
 	}
 	
 	func generateParameters() -> (parameters: [String: AnyObject]?, isSuccess: Bool) {
-		guard let begin = self.beginTextField.text,
-			let end = self.endTextField.text else {
+		guard let begin = beginButton.titleForState(.Normal),
+			let end = endButton.titleForState(.Normal) else {
 				return(nil, false)
 		}
 		let dic: [String: AnyObject] = [
@@ -104,8 +130,8 @@ class UpdateQuestionSettingViewController: UIViewController {
 	}
 	
 	func fillDataForUI() {
-		self.beginTextField.text = self.talkingModel.questionBeginString
-		self.endTextField.text = self.talkingModel.questionEndString
+		self.beginButton.setTitle(self.talkingModel.questionBeginString, forState: .Normal)
+		self.endButton.setTitle(self.talkingModel.questionEndString, forState: .Normal)
 		self.enableTagSwitch.on = self.talkingModel.questionEnableTag
 		self.designatedSwitch.on = self.talkingModel.questionDesignated
 	}
@@ -118,11 +144,7 @@ class UpdateQuestionSettingViewController: UIViewController {
 	
 }
 
-extension UpdateQuestionSettingViewController: UITextFieldDelegate {
-	func textFieldDidBeginEditing(textField: UITextField) {
-		self.datePickerView.hidden = false
-	}
-}
+
 
 
 

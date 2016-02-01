@@ -13,8 +13,16 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
 
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var shortNameTextField: UITextField!
-  @IBOutlet weak var beginTextField: UITextField!
-  @IBOutlet weak var endTextField: UITextField!
+	@IBOutlet weak var beginButton: UIButton! {
+		didSet {
+			self.beginButton.addDefaultCornerRadius()
+		}
+	}
+	@IBOutlet weak var endButton: UIButton! {
+		didSet {
+			self.endButton.addDefaultCornerRadius()
+		}
+	}
   @IBOutlet weak var domainUrlTextField: UITextField!
   @IBOutlet weak var applyUrlTextField: UITextField!
   @IBOutlet weak var mobileApplyUrlTextField: UITextField!
@@ -29,6 +37,7 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
 			self.prepareData()
       self.fillDataForUI()
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 
@@ -56,7 +65,19 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
 			}
 		}
   }
-  
+	
+	@IBAction func beginAction(sender: AnyObject) {
+		self.datePickerView.hidden = false
+		self.beginButton.selected = true
+		self.endButton.selected = false
+	}
+	
+	@IBAction func endAction(sender: AnyObject) {
+		self.datePickerView.hidden = false
+		self.endButton.selected = true
+		self.beginButton.selected = false
+	}
+	
   @IBAction func confirmAction(sender: AnyObject) {
     
     let result = self.generateParameters()
@@ -87,20 +108,21 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   @IBAction func currentTimeAction(sender: AnyObject) {
     let f = NSDateFormatter()
     f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-    let date = NSDate()
-    self.beginTextField.text = f.stringFromDate(date)
-    self.endTextField.text = f.stringFromDate(date)
+    var date = NSDate(timeInterval: 60, sinceDate: NSDate())
+    self.beginButton.setTitle(f.stringFromDate(date), forState: .Normal)
+		date = NSDate(timeInterval: 60 * 60, sinceDate: date)
+    self.endButton.setTitle(f.stringFromDate(date), forState: .Normal)
   }
 	
 	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
 		let f = NSDateFormatter()
-		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		let date = f.stringFromDate(self.datePicker.date)
-		if self.beginTextField.isFirstResponder() {
-			self.beginTextField.text = date
+		f.dateFormat = "yyyy-MM-dd HH:mm"
+		let date = f.stringFromDate(self.datePicker.date) + ":00"
+		if self.beginButton.selected {
+			self.beginButton.setTitle(date, forState: .Normal)
 		}
-		if self.endTextField.isFirstResponder() {
-			self.endTextField.text = date
+		if self.endButton.selected {
+			self.endButton.setTitle(date, forState: .Normal)
 		}
 		UIView.animateWithDuration(0.5) {
 			self.datePickerView.hidden = true
@@ -110,8 +132,8 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   func fillDataForUI() {
     self.nameTextField.text = self.talkingModel.name
 		self.shortNameTextField.text = self.talkingModel.shortName
-		self.beginTextField.text = self.talkingModel.beginTimeString
-		self.endTextField.text = self.talkingModel.endTimeString
+		self.beginButton.setTitle(self.talkingModel.beginTimeString, forState: .Normal)
+		self.endButton.setTitle(self.talkingModel.endTimeString, forState: .Normal)
 		self.domainUrlTextField.text = self.talkingModel.domainUrl
 		self.applyUrlTextField.text = self.talkingModel.applyUrl
 		self.mobileApplyUrlTextField.text = self.talkingModel.mobileApplyUrl
@@ -120,8 +142,8 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
   private func generateParameters() -> (dic: [String: AnyObject]?, isSuccess: Bool) {
     guard let name = nameTextField.text,
       let shortName = shortNameTextField.text,
-      let begin = beginTextField.text,
-      let end = endTextField.text,
+      let begin = beginButton.titleForState(.Normal),
+      let end = endButton.titleForState(.Normal),
       let domainUrl = domainUrlTextField.text,
       let applyUrl = applyUrlTextField.text,
       let mobileApplyUrl = mobileApplyUrlTextField.text else {
@@ -145,16 +167,6 @@ class UpdateTalkingBasicSettingsViewController: UIViewController {
 		self.datePicker.maximumDate = NSDate(timeInterval: 365 * 24 * 60 * 60, sinceDate: NSDate())
 	}
 	
-}
-
-extension UpdateTalkingBasicSettingsViewController: UITextFieldDelegate {
-	func textFieldDidBeginEditing(textField: UITextField) {
-		if !self.datePickerView.hidden {
-			return
-		}
-		UIView.animateWithDuration(0.5) {
-			self.datePickerView.hidden = false
-		}	}
 }
 
 

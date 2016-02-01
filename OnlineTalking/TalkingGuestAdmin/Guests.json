@@ -1,35 +1,68 @@
-[
- {
- "username": "测试嘉宾01",
- "nickname": "test01",
- "position": "XXXX人力资源总监",
- "avatarUrl": "http://7xl461.com2.z0.glb.qiniucdn.com/Images%2Fteacher%2Fhk.png",
- "user": "test01",
- "pass": "test01",
- "admin": true,
- "order": 0,
- "display": true
- },
- {
- "username": "测试嘉宾02",
- "nickname": "test02",
- "position": "XXXX咨询顾问",
- "avatarUrl": "http://7xl461.com2.z0.glb.qiniucdn.com/Images%2Fteacher%2Fhk.png",
- "user": "test02",
- "pass": "test02",
- "admin": false,
- "order": 1,
- "display": true
- },
- {
- "username": "测试嘉宾03",
- "nickname": "test03",
- "position": "XXXX人事专员",
- "avatarUrl": "http://7xl461.com2.z0.glb.qiniucdn.com/Images%2Fteacher%2Fhk.png",
- "user": "test03",
- "pass": "test03",
- "admin": false,
- "order": 2,
- "display": true
- }
+ [
+	{
+	"admin" : false,
+	"avatarUrl" : "http://res.careerfrog.cn/ge%2Fitlp%2F0-yamei.jpg",
+	"display" : true,
+	"nickname" : "Yamei Hu",
+	"order" : 0,
+	"pass" : "ge2016",
+	"position" : "China ITLP Program Manager      O&G China CIO",
+	"user" : "yamei",
+	"username" : "Yamei Hu"
+	},
+	{
+	"admin" : false,
+	"avatarUrl" : "http://res.careerfrog.cn/ge%2Fitlp%2F1-fiona.jpg",
+	"display" : true,
+	"nickname" : "Fiona Zhang",
+	"order" : 1,
+	"pass" : "ge2016",
+	"position" : "China ITLP HR Manager",
+	"user" : "fiona",
+	"username" : "Fiona Zhang"
+	},
+	{
+	"admin" : false,
+	"avatarUrl" : "http://res.careerfrog.cn/ge%2Fitlp%2F2-ellen.jpg",
+	"display" : true,
+	"nickname" : "ITLP-Ellen",
+	"order" : 2,
+	"pass" : "ge2016",
+	"position" : "ITLP-Ellen",
+	"user" : "ellen",
+	"username" : "ITLP-Ellen"
+	},
+	{
+	"admin" : false,
+	"avatarUrl" : "http://res.careerfrog.cn/ge%2Fitlp%2F4-yuchen.jpg",
+	"display" : true,
+	"nickname" : "ITLP-Yuchen",
+	"order" : 3,
+	"pass" : "ge2016",
+	"position" : "ITLP-Yuchen",
+	"user" : "yuchen",
+	"username" : "ITLP-Yuchen"
+	},
+	{
+	"admin" : false,
+	"avatarUrl" : "http://res.careerfrog.cn/ge%2Fitlp%2F5-vera.jpg",
+	"display" : true,
+	"nickname" : "ITLP Graduate-Vera",
+	"order" : 4,
+	"pass" : "ge2016",
+	"position" : "ITLP Graduate-Vera",
+	"user" : "graduate",
+	"username" : "ITLP Graduate-Vera"
+	},
+	{
+	"admin" : true,
+	"avatarUrl" : "http://res.careerfrog.cn/ge%2Fitlp%2F6-anna.jpg",
+	"display" : false,
+	"nickname" : "Anna",
+	"order" : 5,
+	"pass" : "ge2016",
+	"position" : "ITLP Coordinator",
+	"user" : "anna",
+	"username" : "Anna"
+	}
 	]

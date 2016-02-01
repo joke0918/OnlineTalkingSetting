@@ -1,14 +1,92 @@
-[
-  {
-    "content" : "点击屏幕右上角“网申通道”可查看BAI被投企业2016联合校招详情",
-    "order" : 0,
-    "tags" : [],
-    "title" : "点击屏幕右上角“网申通道”可查看BAI被投企业2016联合校招详情"
-  },
-  {
-    "content" : "联合校招共有多少BAI成员企业参加？共招聘多少人？主要有哪些职位？",
-    "order" : 1,
-    "tags" : [],
-    "title" : "联合校招共有多少BAI成员企业参加？共招聘多少人？主要有哪些职位？"
-  }
-]
+ [
+	{
+	"content" : "我们会给每个EID安排一个Assignment Leader， 并交给你一个适合2个月的IT项目。这将是一个实战项目，会涉及到ERP/BI/Cloud/infrastructure等，从中你可以学到项目管理和IT技术。",
+	"order" : 0,
+	"tags" : [],
+	"title" : "ITLP-EID在实习期间主要的工作是什么呢？"
+	},
+	{
+	"content" : "我们欢迎有一定IT基础、IT热情的小伙伴！这不是唯一决定因素但是一个加分项！这个项目中，我们会注重IT方面的技术能力、领导力的发展潜力两方面。我们希望同学有较全面的IT知识，能够快速理解公司内部信息系统架构和建设方法。懂代码，是一种优势，在工业互联网的大背景下，我们鼓励更多有技术背景的同学加入我们。",
+	"order" : 1,
+	"tags" : [],
+	"title" : "请问是不是要有一定的IT基础才有可能获得实习的机会？ITLP对于技术的要求是怎样的？需要代码能力很强吗？"
+	},
+	{
+	"content" : "因为面试主要环节都是英文，所以英文好会有一些优势，但我们也会综合考虑面试者的全面素质。工作中中英文都会用到，需要你英语能正常交流和表达。",
+	"order" : 2,
+	"tags" : [],
+	"title" : "ITLP/ITLP-EID对英语能力的要求如何？ 日常工作中相互交流用英语还是中文啊？"
+	},
+	{
+	"content" : "ITLP/ITLP-EID招聘主要面向信息管理、计算机、软件、工程类等专业，同时，商务、金融、统计等专业的同学如果有一定IT基础也都可以哟！",
+	"order" : 3,
+	"tags" : [],
+	"title" : "ITLP-EID招聘会优先考虑哪些专业，比如信息系统以及信息管理么？"
+	},
+	{
+	"content" : "我们会通过面试表现和个人的教育和实践背景决定是否录取，学历高低只是一个因素。所以每年都有很多出色的本科生获得我们的实习生职位。毕业学校不是重点，if you are the right one！",
+	"order" : 4,
+	"tags" : [],
+	"title" : "每年被ITLP录取的本科生多不多呀？对毕业学校有什么要求吗？"
+	},
+	{
+	"content" : "没有，鼓励对IT有激情、有想法的年轻人参加。",
+	"order" : 5,
+	"tags" : [],
+	"title" : "筛选简历的时候有什么硬性标准吗？"
+	},
+	{
+	"content" : "我们分群面和单面。群面是针对一个企业的IT case进行讨论。单面一般从两方面进行考察：过往经历和对未来的预测。 针对过往经历，可以挑选简历中任何部分进行提问；对于未来变化的预测，可以提供一种场景供其分析，或者让其列出对于未来工作的计划。",
+	"order" : 6,
+	"tags" : [],
+	"title" : "EID面试的时候主要考察哪方面的能力呢？"
+	},
+	{
+	"content" : "对技术的热爱，对公司业务的理解能力，沟通能力和领导力。",
+	"order" : 7,
+	"tags" : [],
+	"title" : "ITLP项目最需要的是什么样的能力？"
+	},
+	{
+	"content" : "由于在实习接触的都是实际的项目，因此希望你能够准时入职，如果能够提前就更好啦！但如果确实需要推迟，要和Leader/HR商议哦！",
+	"order" : 8,
+	"tags" : [],
+	"title" : "如果能拿到ITLP-EID的OFFER，是必须在7.1入职吗？"
+	},
+	{
+	"content" : "实习结束后会对EID有统一的考核和面试，这取决于你的实习表现和面试表现。如果能力优秀， 我们都会考虑。大概是10月通知结果。",
+	"order" : 9,
+	"tags" : [],
+	"title" : "请问暑期实习结束之后有多大可能拿到正式工作的offer呢？这个结果是在8月底实习结束就知道么？"
+	},
+	{
+	"content" : "平台足够大，ITLP轮岗期间能接触到IT领域的各类内容，包括ERP, CRM, Infrastructure, Security，还有最近火热高大上的industrial internet等。此外，GE很注重员工的培训和长期成长。比如ITLP期间一次美国、一次欧洲的培训等。",
+	"order" : 10,
+	"tags" : [],
+	"title" : "请问前辈，GE ITLP最吸引你的是什么？"
+	},
+	{
+	"content" : "自学，Google，还有最重要的是和team合作。与team的合作过程中你会学到很多。同时需要你自己有很强的好学性和主动性，learn from work是ITLP的必备技能哦。",
+	"order" : 11,
+	"tags" : [],
+	"title" : "在工作中你们碰到不会的知识，在没有老师的情况时怎么解决呢？"
+	},
+	{
+	"content" : "ITLP-information technology leadership program, 代表 technology & leadership 对我们都很重要，而且aggressive 与leadership 也不是等同的。",
+	"order" : 12,
+	"tags" : [],
+	"title" : "在设置这个group interview的时候有没有考虑过由于“ITLP”这个title有leadership这个涵义，可能会引导大家在群面过程中更加的aggressive？"
+	},
+	{
+	"content" : "我们会从你的面试表现中来进行判断哦，因此你只要大胆做自己就可以啦！在单面中，除了领导力之外，我们还会观察你的各项能力来进行综合判断。",
+	"order" : 13,
+	"tags" : [],
+	"title" : "应该如何在面试中展现我们的领导力呢？是要在群面中争做leader，还是在单面中举一些例子来说明？"
+	},
+	{
+	"content" : "Anyone who holds Chinese nationality can apply for our program. If you do not have, no worry, ITLP is a global program, and you can apply for the program in your region.",
+	"order" : 14,
+	"tags" : [],
+	"title" : "Is it allowed to foreign student to apply to ITLP? I mean , foreign students studying in China (留学生)."
+	}
+	]

@@ -29,6 +29,9 @@
 		11FE2AEE1C44DC76001FEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AEC1C44DC76001FEFB2 /* LaunchScreen.storyboard */; };
 		11FE2AF91C44DC76001FEFB2 /* OnlineTalkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AF81C44DC76001FEFB2 /* OnlineTalkingTests.swift */; };
 		11FE2B041C44DC76001FEFB2 /* OnlineTalkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2B031C44DC76001FEFB2 /* OnlineTalkingUITests.swift */; };
+		760ABA0A1C5B701000F38D6B /* Template.json in Resources */ = {isa = PBXBuildFile; fileRef = 760ABA091C5B701000F38D6B /* Template.json */; };
+		763AE9A81C521E9C00E4A4FF /* SendEmailSmsToWinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763AE9A71C521E9C00E4A4FF /* SendEmailSmsToWinnerViewController.swift */; };
+		7644D8D61C5639D300C223F6 /* Guests.json in Resources */ = {isa = PBXBuildFile; fileRef = 7644D8D51C5639D300C223F6 /* Guests.json */; };
 		764B67A21C4783A700B7859B /* TalkingSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764B679B1C4783A700B7859B /* TalkingSetting.storyboard */; };
 		764B67A31C4783A700B7859B /* TalkingSettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */; };
 		764B67A41C4783A700B7859B /* TalkingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B679D1C4783A700B7859B /* TalkingListViewController.swift */; };
@@ -46,7 +49,6 @@
 		764B67B91C47858200B7859B /* GuestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B41C47858200B7859B /* GuestListCell.swift */; };
 		764B67BA1C47858200B7859B /* GuestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67B51C47858200B7859B /* GuestModel.swift */; };
 		764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */; };
-		764B67BE1C47900500B7859B /* Guests.json in Resources */ = {isa = PBXBuildFile; fileRef = 764B67BD1C47900500B7859B /* Guests.json */; };
 		764B67C01C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */; };
 		765A43341C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */; };
 		767CB0AD1C48FCFE00282FFE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767CB0AC1C48FCFE00282FFE /* Alamofire.framework */; };
@@ -61,6 +63,7 @@
 		768FD5991C4CBF9F005A741E /* Talking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768FD5981C4CBF9F005A741E /* Talking.storyboard */; };
 		768FD59B1C4CD1A5005A741E /* TalkingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768FD59A1C4CD1A5005A741E /* TalkingDetailsViewController.swift */; };
 		769ADD761C4A9B3A0028109B /* TalkingTemplate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769ADD751C4A9B3A0028109B /* TalkingTemplate.storyboard */; };
+		76B7597B1C4E2517000804D6 /* TalkingManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B7597A1C4E2517000804D6 /* TalkingManagerViewController.swift */; };
 		FBF04128F72B1A9EA4190CDB /* Pods_OnlineTalking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D044D2213CD5EED221EF90E /* Pods_OnlineTalking.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +116,9 @@
 		11FE2B051C44DC76001FEFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B977DDB04E646738D762CB2 /* Pods-OnlineTalking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineTalking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineTalking/Pods-OnlineTalking.debug.xcconfig"; sourceTree = "<group>"; };
 		561B37D20F0C6E075C4F6751 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		760ABA091C5B701000F38D6B /* Template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Template.json; sourceTree = "<group>"; };
+		763AE9A71C521E9C00E4A4FF /* SendEmailSmsToWinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailSmsToWinnerViewController.swift; sourceTree = "<group>"; };
+		7644D8D51C5639D300C223F6 /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
 		764B679B1C4783A700B7859B /* TalkingSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingSetting.storyboard; sourceTree = "<group>"; };
 		764B679C1C4783A700B7859B /* TalkingSettingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingSettingListViewController.swift; sourceTree = "<group>"; };
 		764B679D1C4783A700B7859B /* TalkingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingListViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +136,6 @@
 		764B67B41C47858200B7859B /* GuestListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListCell.swift; sourceTree = "<group>"; };
 		764B67B51C47858200B7859B /* GuestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestModel.swift; sourceTree = "<group>"; };
 		764B67BB1C4785CD00B7859B /* UpdateVideoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVideoSettingViewController.swift; sourceTree = "<group>"; };
-		764B67BD1C47900500B7859B /* Guests.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Guests.json; sourceTree = "<group>"; };
 		764B67BF1C47A0A200B7859B /* UpdateRegistrationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateRegistrationSettingViewController.swift; path = ../TalkingSetting/UpdateRegistrationSettingViewController.swift; sourceTree = "<group>"; };
 		765A43331C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloneAllTalkingSettingViewController.swift; sourceTree = "<group>"; };
 		767CB0AC1C48FCFE00282FFE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -145,6 +150,7 @@
 		768FD5981C4CBF9F005A741E /* Talking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Talking.storyboard; sourceTree = "<group>"; };
 		768FD59A1C4CD1A5005A741E /* TalkingDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingDetailsViewController.swift; sourceTree = "<group>"; };
 		769ADD751C4A9B3A0028109B /* TalkingTemplate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TalkingTemplate.storyboard; sourceTree = "<group>"; };
+		76B7597A1C4E2517000804D6 /* TalkingManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkingManagerViewController.swift; sourceTree = "<group>"; };
 		AE7D42C72435E4C976077037 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA8047AB05EF74F7CCFD1170 /* Pods-OnlineTalking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineTalking.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnlineTalking/Pods-OnlineTalking.release.xcconfig"; sourceTree = "<group>"; };
 		F0BEFB972E75507C1876636E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 				112D70A41C45F783008DD268 /* ExamAdmin */,
 				764B67841C47791B00B7859B /* TalkingGuestAdmin */,
 				769ADD741C4A9B1D0028109B /* TalkingTemplate */,
+				76B759791C4E24E3000804D6 /* TalkingManager */,
 				11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */,
 				11FE2AE51C44DC76001FEFB2 /* ViewController.swift */,
 				764B67AF1C47856A00B7859B /* CommonHelper.swift */,
@@ -321,7 +328,7 @@
 		764B67841C47791B00B7859B /* TalkingGuestAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				764B67BD1C47900500B7859B /* Guests.json */,
+				7644D8D51C5639D300C223F6 /* Guests.json */,
 				764B67B11C47858200B7859B /* TalkingGuestAdmin.storyboard */,
 				764B67B21C47858200B7859B /* GuestListViewController.swift */,
 				764B67B31C47858200B7859B /* UpdateGuestViewController.swift */,
@@ -343,12 +350,22 @@
 		769ADD741C4A9B1D0028109B /* TalkingTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				760ABA091C5B701000F38D6B /* Template.json */,
 				769ADD751C4A9B3A0028109B /* TalkingTemplate.storyboard */,
 				768FD5951C4C8FE9005A741E /* TalkingTemplateViewController.swift */,
 				768FD5931C4C8A20005A741E /* AddTalkingEmailViewController.swift */,
 				768FD5911C4C89DF005A741E /* AddTalkingSmsViewController.swift */,
+				763AE9A71C521E9C00E4A4FF /* SendEmailSmsToWinnerViewController.swift */,
 			);
 			path = TalkingTemplate;
+			sourceTree = "<group>";
+		};
+		76B759791C4E24E3000804D6 /* TalkingManager */ = {
+			isa = PBXGroup;
+			children = (
+				76B7597A1C4E2517000804D6 /* TalkingManagerViewController.swift */,
+			);
+			path = TalkingManager;
 			sourceTree = "<group>";
 		};
 		DD8870CD59E0F3B806B15864 /* Pods */ = {
@@ -472,11 +489,12 @@
 			files = (
 				764B67A21C4783A700B7859B /* TalkingSetting.storyboard in Resources */,
 				11FE2AEE1C44DC76001FEFB2 /* LaunchScreen.storyboard in Resources */,
+				7644D8D61C5639D300C223F6 /* Guests.json in Resources */,
+				760ABA0A1C5B701000F38D6B /* Template.json in Resources */,
 				112D70C91C4625AA008DD268 /* Exam.json in Resources */,
 				11FE2AEB1C44DC76001FEFB2 /* Assets.xcassets in Resources */,
 				11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */,
 				112D70C01C45FFF1008DD268 /* CommonQuestion.json in Resources */,
-				764B67BE1C47900500B7859B /* Guests.json in Resources */,
 				768FD5991C4CBF9F005A741E /* Talking.storyboard in Resources */,
 				769ADD761C4A9B3A0028109B /* TalkingTemplate.storyboard in Resources */,
 				112D70A61C45F78E008DD268 /* ExamAdmin.storyboard in Resources */,
@@ -559,6 +577,7 @@
 				112D70A81C45F83B008DD268 /* ExamModel.swift in Sources */,
 				768FD5961C4C8FE9005A741E /* TalkingTemplateViewController.swift in Sources */,
 				764B67AC1C47853000B7859B /* CompanyListViewController.swift in Sources */,
+				76B7597B1C4E2517000804D6 /* TalkingManagerViewController.swift in Sources */,
 				764B67A81C4783A700B7859B /* TalkingManager.swift in Sources */,
 				768FD59B1C4CD1A5005A741E /* TalkingDetailsViewController.swift in Sources */,
 				764B67B01C47856A00B7859B /* CommonHelper.swift in Sources */,
@@ -574,6 +593,7 @@
 				764B67B91C47858200B7859B /* GuestListCell.swift in Sources */,
 				764B67BC1C4785CD00B7859B /* UpdateVideoSettingViewController.swift in Sources */,
 				112D70CE1C4634BE008DD268 /* CreateTalkingViewController.swift in Sources */,
+				763AE9A81C521E9C00E4A4FF /* SendEmailSmsToWinnerViewController.swift in Sources */,
 				765A43341C48A0E700A565B8 /* CloneAllTalkingSettingViewController.swift in Sources */,
 				112D70AA1C45FD44008DD268 /* ExamListCell.swift in Sources */,
 				764B67A31C4783A700B7859B /* TalkingSettingListViewController.swift in Sources */,

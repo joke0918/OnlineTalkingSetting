@@ -15,16 +15,14 @@ class TalkingListViewController: UIViewController {
 	@IBOutlet weak var filterSegmentedControl: UISegmentedControl!
 	
 	@IBOutlet weak var tableView: UITableView!
-	@IBOutlet weak var companyIDTextField: UITextField!
+
 	private var talkingListArray: [TalkingListModel] = []
 	var filteredTalkingListArray: [TalkingListModel] = []
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-			
 			self.automaticallyAdjustsScrollViewInsets = false
-			
 			
 		}
 
@@ -49,12 +47,33 @@ class TalkingListViewController: UIViewController {
 			else { return }
 			let talkingModel = self.filteredTalkingListArray[indexPath.row]
 			TalkingManager.sharedInstance.currentTalkingID = talkingModel.talkingId
-			vc.title = talkingModel.name
+			
+			vc.title = talkingModel.name.componentsSeparatedByString("——").last!
     }
 
 	// MARK: - life cycle
 	// MARK: - delegate
 	// MARK: - response event
+	
+	@IBAction func swipGesture(swip: UISwipeGestureRecognizer) {
+		switch swip.direction {
+		case UISwipeGestureRecognizerDirection.Left:
+			var index = self.filterSegmentedControl.selectedSegmentIndex
+			if index < 2 {
+				index++
+				self.filterSegmentedControl.selectedSegmentIndex = index
+				self.filterTalkingListArray()
+			}
+		case UISwipeGestureRecognizerDirection.Right:
+			var index = self.filterSegmentedControl.selectedSegmentIndex
+			if index > 0 {
+				index--
+				self.filterSegmentedControl.selectedSegmentIndex = index
+				self.filterTalkingListArray()
+			}
+		default: break
+		}
+	}
 	
 	@IBAction func filterAction(sender: AnyObject) {
 		self.filterTalkingListArray()
@@ -104,9 +123,14 @@ class TalkingListViewController: UIViewController {
 			guard responseDic["status"] as? String == "SUCCESS",
 			let resultDic = responseDic["result"] as? [[String: AnyObject]] else { return }
 			self.talkingListArray.removeAll()
+			var array: [TalkingListModel] = []
 			for talkingListDic in resultDic {
 				let model = TalkingListModel(dic: talkingListDic)
-				self.talkingListArray.append(model)
+				array.append(model)
+			}
+			self.talkingListArray = array.sort {
+				(t1, t2) in
+				return t1.begin < t2.begin
 			}
 			self.filterTalkingListArray()
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in

@@ -9,7 +9,7 @@
         <!--Guest List View Controller-->
         <scene sceneID="6Ou-cT-A7u">
             <objects>
-                <tableViewController id="vy6-9a-ac7" customClass="GuestListViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GuestListViewController" id="vy6-9a-ac7" customClass="GuestListViewController" customModule="OnlineTalking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="8pK-pZ-GmY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,7 +375,15 @@
                             <constraint firstItem="pKu-FC-a0q" firstAttribute="top" secondItem="gXe-69-O79" secondAttribute="bottom" constant="30" id="w6U-yz-h4O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kGG-9W-jc4"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kGG-9W-jc4">
+                        <barButtonItem key="rightBarButtonItem" title="Admin" id="RYA-H4-nWH">
+                            <connections>
+                                <action selector="adminAction:" destination="Z8S-eY-b3e" id="ccW-yd-PJW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="adminSwitch" destination="tel-aB-IBP" id="cR3-Vq-K0Q"/>

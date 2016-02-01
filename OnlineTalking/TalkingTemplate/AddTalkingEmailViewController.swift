@@ -13,32 +13,36 @@ class AddTalkingEmailViewController: UIViewController {
 
 	@IBOutlet weak var titleTextField: UITextField!
 	
-	@IBOutlet weak var contentTextField: UITextField!
+	@IBOutlet weak var contentTextView: UITextView!
 	
 	var name: String = ""
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
+			self.fillDataForUI()
         // Do any additional setup after loading the view.
     }
 	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
+
+
 		if name == "template.register.user" {
-			self.titleTextField.text = "你已成功报名「{online_talk_name}」"
-			self.contentTextField.text = "<p>亲爱的同学，</p><p>你已成功报名「{online_talk_name}」，请于北京时间{online_talk_time}登录 {online_talk_link} 收看宣讲会。PC端和移动端都支持，但为了保证最佳收看效果，我们建议你使用PC端参与。</p><p>{online_talk_short}</p>"
+			self.title = "预报名邮件"
 		}
 		if name == "template.notification.user" {
-			self.titleTextField.text = "【{online_talk_short}】你预约的{online_talk_name}将于北京时间{online_talk_time}开幕，期待你的参与"
-			self.contentTextField.text = "<p>亲爱的同学，</p><p>你预约的{online_talk_name}将于北京时间{online_talk_time}开幕，请登录 {online_talk_link} 收看。PC端和移动端都支持，但为了保证最佳收看效果，我们建议你使用PC端参与。</p><p>祝应聘成功<br>{online_talk_short}</p>"
+			self.title = "开始前一天邮件"
 		}
 		if name == "template.notification.question.answered" {
-			self.titleTextField.text = "【{online_talk_short}】你在{name}空中宣讲会提交的提问「{question_short}」已被解答！"
-			self.contentTextField.text = "<p>你在{name}空中宣讲会提交的提问已被解答！</p><p>问题描述<br>{question}</p><p>解答如下<br>{answer}</p><p>祝应聘成功<br>{online_talk_short}</p>"
-		}
+			self.title = "问题回答邮件"
 
+		}
+		
+		if name == "template.exam.winner.user" {
+			self.title = "直通券邮件"
+
+		}
 	}
 	
     override func didReceiveMemoryWarning() {
@@ -61,7 +65,7 @@ class AddTalkingEmailViewController: UIViewController {
 		let dic = [
 			"name": self.name,
 			"title": self.titleTextField.text!,
-			"content": self.contentTextField.text!
+			"content": self.contentTextView.text!
 		]
 		let urlString = "http://api.careerfrog.cn/api/tpl-admin/\(TalkingManager.sharedInstance.talkingModel.talkingId)/email/add"
 		request(.POST, urlString, parameters: dic, encoding: .JSON, headers: nil).responseJSON() {
@@ -78,6 +82,25 @@ class AddTalkingEmailViewController: UIViewController {
 			})
 			
 		}
+	}
+	
+	func fillDataForUI() {
+		do {
+			guard let filePath = NSBundle.mainBundle().pathForResource("Template.json", ofType: nil),
+				let data = NSData(contentsOfFile: filePath),
+				let dic = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String: AnyObject] else {
+					self.showAlertWithMessage("读取本地数据失败")
+					return
+		}
+			if let templateDic = dic[self.name] as? [String: AnyObject] {
+				self.titleTextField.text = templateDic["title"] as? String
+				self.contentTextView.text = templateDic["content"] as? String
+			}
+		} catch {
+			
+		}
+		
+		
 	}
 	
 }

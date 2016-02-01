@@ -20,6 +20,7 @@ class CloneAllTalkingSettingViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.title = ""
+			self.setBackToMainViewControllerBarButton()
 //			self.title = TalkingManager.sharedInstance.talkingModel.name
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

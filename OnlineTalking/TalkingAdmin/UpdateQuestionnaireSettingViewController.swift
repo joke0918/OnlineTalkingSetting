@@ -22,6 +22,7 @@ class UpdateQuestionnaireSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.fillDataForUI()
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 

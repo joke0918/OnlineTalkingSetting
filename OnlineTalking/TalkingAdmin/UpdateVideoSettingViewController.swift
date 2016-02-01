@@ -13,9 +13,19 @@ class UpdateVideoSettingViewController: UIViewController {
 
 	var talkingModel: TalkingModel!
 	
-	@IBOutlet weak var beginTextField: UITextField!
+	@IBOutlet weak var beginButton: UIButton! {
+		didSet {
+			self.beginButton.addDefaultCornerRadius()
+		}
+	}
+
 	
-	@IBOutlet weak var endTextField: UITextField!
+	@IBOutlet weak var endButton: UIButton! {
+		didSet {
+			self.endButton.addDefaultCornerRadius()
+		}
+	}
+
 	
 	@IBOutlet weak var urlTextField: UITextField!
 	
@@ -29,6 +39,7 @@ class UpdateVideoSettingViewController: UIViewController {
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
 			self.prepareData()
 			self.fillDataForUI()
+			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
     }
 
@@ -50,11 +61,58 @@ class UpdateVideoSettingViewController: UIViewController {
 
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
 		self.view.endEditing(true)
+		if !self.datePickerView.hidden {
+			UIView.animateWithDuration(0.5) {
+				self.datePickerView.hidden = true
+			}
+		}
+	}
+	
+	@IBAction func beginAction(sender: AnyObject) {
+		self.datePickerView.hidden = false
+		self.beginButton.selected = true
+		self.endButton.selected = false
+	}
+	
+	@IBAction func endAction(sender: AnyObject) {
+		self.datePickerView.hidden = false
+		self.endButton.selected = true
+		self.beginButton.selected = false
 	}
 	
 	@IBAction func confirmAction(sender: AnyObject) {
-		guard let begin = self.beginTextField.text,
-		let end = self.endTextField.text,
+		self.updateVideoSetting()
+	}
+	
+	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
+		
+		let f = NSDateFormatter()
+		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		let date = f.stringFromDate(self.datePicker.date)
+		if self.beginButton.selected {
+			self.beginButton.setTitle(date, forState: .Normal)
+		}
+		if self.endButton.selected {
+			self.endButton.setTitle(date, forState: .Normal)
+		}
+		UIView.animateWithDuration(0.5) {
+			self.datePickerView.hidden = true
+		}
+	}
+	
+	@IBAction func changeToCurrentTime(sender: AnyObject) {
+		let f = NSDateFormatter()
+		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+		var date = NSDate(timeInterval: 60, sinceDate: NSDate())
+		self.beginButton.setTitle(f.stringFromDate(date), forState: .Normal)
+		date = NSDate(timeInterval: 60 * 60, sinceDate: date)
+		self.endButton.setTitle(f.stringFromDate(date), forState: .Normal)
+		
+	}
+	
+	func updateVideoSetting() {
+		guard let begin = beginButton.titleForState(.Normal),
+			let end = endButton.titleForState(.Normal),
 			let url = self.urlTextField.text else {
 				debugPrint("输入信息有误")
 				return
@@ -78,37 +136,12 @@ class UpdateVideoSettingViewController: UIViewController {
 				self.showAlertWithMessage("修改成功")
 			})
 		}
-		
-	}
-	
-	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
-		
-		self.datePickerView.hidden = true
-		let f = NSDateFormatter()
-		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		if self.beginTextField.isFirstResponder() {
-			self.beginTextField.text = f.stringFromDate(self.datePicker.date)
-		}
-		
-		if self.endTextField.isFirstResponder() {
-			self.endTextField.text = f.stringFromDate(self.datePicker.date)
-		}
-		self.view.endEditing(true)
-	}
-	
-	@IBAction func changeToCurrentTime(sender: AnyObject) {
-		let f = NSDateFormatter()
-		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		let beginDate = NSDate(timeInterval: 60, sinceDate: NSDate())
-		let endDate = NSDate(timeInterval: 3600, sinceDate: beginDate)
-		self.beginTextField.text = f.stringFromDate(beginDate)
-		self.endTextField.text = f.stringFromDate(endDate)
-		
+
 	}
 	
 	func fillDataForUI() {
-		self.beginTextField.text = self.talkingModel.videoBeginString
-		self.endTextField.text = self.talkingModel.videoEndString
+		self.beginButton.setTitle(self.talkingModel.videoBeginString, forState: .Normal)
+		self.endButton.setTitle(self.talkingModel.videoEndString, forState: .Normal)
 		self.urlTextField.text = self.talkingModel.videoUrl
 	}
 	
@@ -117,6 +150,20 @@ class UpdateVideoSettingViewController: UIViewController {
 		self.datePicker.minimumDate = NSDate(timeInterval: -60 * 60, sinceDate: date)
 		self.datePicker.maximumDate = NSDate(timeInterval: 365 * 24 * 60 * 60, sinceDate: date)
 		
+	}
+	
+	override func previewActionItems() -> [UIPreviewActionItem] {
+		let currentTimeAction = UIPreviewAction(title: "现在播放", style: .Default) {
+			(previewAction, viewcontroller) in
+			let f = NSDateFormatter()
+			f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+			var date = NSDate(timeInterval: 30, sinceDate: NSDate())
+			self.beginButton.setTitle(f.stringFromDate(date), forState: .Normal)
+			date = NSDate(timeInterval: 60 * 60, sinceDate: date)
+			self.endButton.setTitle(f.stringFromDate(date), forState: .Normal)
+			self.updateVideoSetting()
+		}
+		return [currentTimeAction]
 	}
 	
 }
