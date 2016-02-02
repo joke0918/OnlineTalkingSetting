@@ -21,11 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+	// 3D-touch
 	func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
 		self.handleShortItem(shortcutItem)
 		completionHandler(true)
 	}
 	
+	// 3D-touch
 	func handleShortItem(shortcutItem: UIApplicationShortcutItem) {
 		switch shortcutItem.type {
 		case "com.careerfrog.onlinetalking.login":

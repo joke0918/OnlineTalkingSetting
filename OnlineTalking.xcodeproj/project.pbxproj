@@ -23,7 +23,6 @@
 		112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112D70CF1C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift */; };
 		1148E3D61C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */; };
 		11FE2AE41C44DC76001FEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */; };
-		11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE2AE51C44DC76001FEFB2 /* ViewController.swift */; };
 		11FE2AE91C44DC76001FEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AE71C44DC76001FEFB2 /* Main.storyboard */; };
 		11FE2AEB1C44DC76001FEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AEA1C44DC76001FEFB2 /* Assets.xcassets */; };
 		11FE2AEE1C44DC76001FEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE2AEC1C44DC76001FEFB2 /* LaunchScreen.storyboard */; };
@@ -103,7 +102,6 @@
 		1148E3D51C4746A5005A5CC1 /* UpdateTalkingIndexSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTalkingIndexSettingsViewController.swift; sourceTree = "<group>"; };
 		11FE2AE01C44DC75001FEFB2 /* OnlineTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11FE2AE51C44DC76001FEFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11FE2AE81C44DC76001FEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11FE2AEA1C44DC76001FEFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11FE2AED1C44DC76001FEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -260,8 +258,8 @@
 				764B67841C47791B00B7859B /* TalkingGuestAdmin */,
 				769ADD741C4A9B1D0028109B /* TalkingTemplate */,
 				76B759791C4E24E3000804D6 /* TalkingManager */,
+				7689F28D1C5EF711005C3BEB /* Extension */,
 				11FE2AE31C44DC76001FEFB2 /* AppDelegate.swift */,
-				11FE2AE51C44DC76001FEFB2 /* ViewController.swift */,
 				764B67AF1C47856A00B7859B /* CommonHelper.swift */,
 				11FE2AE71C44DC76001FEFB2 /* Main.storyboard */,
 				11FE2AEA1C44DC76001FEFB2 /* Assets.xcassets */,
@@ -336,6 +334,13 @@
 				764B67B51C47858200B7859B /* GuestModel.swift */,
 			);
 			path = TalkingGuestAdmin;
+			sourceTree = "<group>";
+		};
+		7689F28D1C5EF711005C3BEB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		768FD5971C4CBF92005A741E /* Talking */ = {
@@ -450,7 +455,7 @@
 				TargetAttributes = {
 					11FE2ADF1C44DC75001FEFB2 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9G49A29794;
+						DevelopmentTeam = 5XDXM2VFFA;
 					};
 					11FE2AF31C44DC76001FEFB2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -587,7 +592,6 @@
 				767D3B091C48E2B300CB813E /* UpdateQuestionnaireSettingViewController.swift in Sources */,
 				764B67B71C47858200B7859B /* GuestListViewController.swift in Sources */,
 				764B67A41C4783A700B7859B /* TalkingListViewController.swift in Sources */,
-				11FE2AE61C44DC76001FEFB2 /* ViewController.swift in Sources */,
 				767D3B051C48CC5100CB813E /* UpdateIntroductionSettingViewController.swift in Sources */,
 				112D70D01C464525008DD268 /* UpdateTalkingBasicSettingsViewController.swift in Sources */,
 				764B67B91C47858200B7859B /* GuestListCell.swift in Sources */,
@@ -755,7 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -764,7 +768,7 @@
 				);
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.onlinetalkingsetting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.yeo.onlinetalking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1ac2a00b-4c9f-4b26-b669-e3d7e7cb3a78";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -778,7 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LU QIANG (5X77FWJ9RR)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -787,7 +791,7 @@
 				);
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.onlinetalkingsetting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.yeo.onlinetalking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1ac2a00b-4c9f-4b26-b669-e3d7e7cb3a78";
 				TARGETED_DEVICE_FAMILY = 1;

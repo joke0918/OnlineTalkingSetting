@@ -8,6 +8,9 @@
 
 import UIKit
 
+let ScreenWidth = UIScreen.mainScreen().bounds.size.width
+let ScreenHeight = UIScreen.mainScreen().bounds.size.height
+
 class CommonHelper: NSObject {
 	
 }
@@ -66,9 +69,19 @@ extension UIViewController {
 }
 
 extension UIButton {
+
 	func addDefaultCornerRadius() {
 		self.layer.cornerRadius = 4
 		self.layer.masksToBounds = true
 		self.layer.borderWidth = 1
 	}
+	
 }
+
+
+
+
+
+
+
+

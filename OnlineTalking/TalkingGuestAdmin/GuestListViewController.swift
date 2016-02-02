@@ -25,11 +25,12 @@ class GuestListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 			self.tableView.estimatedRowHeight = 90
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+			
+			let removeAllButton = UIButton(type: .System)
+			removeAllButton.frame = CGRectMake(0, 0, ScreenWidth, 40)
+			removeAllButton.setTitle("一键清空", forState: .Normal)
+			removeAllButton.addTarget(self, action: "deleteAllGuestsAction:", forControlEvents: .TouchUpInside)
+			self.tableView.tableHeaderView = removeAllButton
     }
 
 	override func viewWillAppear(animated: Bool) {
@@ -57,6 +58,14 @@ class GuestListViewController: UITableViewController {
 			
 		}
 		
+	}
+	
+	func deleteAllGuestsAction(render: AnyObject) {
+		self.showAlertWithMessage("是否清空全部嘉宾") {
+			[unowned self]
+			action in
+			self.deleteAllGuests()
+		}
 	}
 	
 	@IBAction func addLocalGuestsAction(sender: AnyObject) {
@@ -97,6 +106,23 @@ class GuestListViewController: UITableViewController {
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				self.tableView.reloadData()
 			})
+		}
+	}
+	
+	func deleteAllGuests() {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
+			[unowned self] in
+			self.committingGuestCount = self.guestListArray.count - 1
+			for guestModel in self.guestListArray {
+				NSThread.sleepForTimeInterval(0.1)
+				if guestModel.username != "admin" {
+					let urlString = "http://api.careerfrog.cn/api/guest-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(guestModel.guestId)"
+					request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
+						response in
+						self.committingGuestCount--
+					}
+				}
+			}
 		}
 	}
 	

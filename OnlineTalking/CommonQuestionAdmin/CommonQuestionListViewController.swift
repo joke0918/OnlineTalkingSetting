@@ -25,11 +25,12 @@ class CommonQuestionListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       self.tableView.estimatedRowHeight = 110
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+			
+			let removeAllButton = UIButton(type: .System)
+			removeAllButton.frame = CGRectMake(0, 0, ScreenWidth, 40)
+			removeAllButton.setTitle("一键清空", forState: .Normal)
+			removeAllButton.addTarget(self, action: "deleteAllQuestionsAction:", forControlEvents: .TouchUpInside)
+			self.tableView.tableHeaderView = removeAllButton
     }
 
   override func viewWillAppear(animated: Bool) {
@@ -59,7 +60,15 @@ class CommonQuestionListViewController: UITableViewController {
     }
 
   }
-  
+	
+	func deleteAllQuestionsAction(sender: AnyObject) {
+		self.showAlertWithMessage("确定删除所有问答?") {
+			[unowned self]
+			action in
+			self.deleteAllQuestions()
+		}
+	}
+	
   @IBAction func addLocalCommonQuestionsAction(sender: AnyObject) {
     guard let filePath = NSBundle.mainBundle().pathForResource("CommonQuestion.json", ofType: nil),
       let data = NSData(contentsOfFile: filePath)
@@ -157,6 +166,24 @@ class CommonQuestionListViewController: UITableViewController {
     }
   }
 
+	func deleteAllQuestions() {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
+			[unowned self] in
+			self.commitQuestionCount = self.commonQuestionListArray.count
+			for questionMdeol in self.commonQuestionListArray {
+				NSThread.sleepForTimeInterval(0.1)
+				let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(questionMdeol.questionId)"
+   
+				request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
+			
+			
+					response in
+					self.commitQuestionCount--
+				}
+			}
+		}
+	}
+	
   func addLocalCommonQuestion(questionArray array: [[String: AnyObject]]) {
 
     self.commitQuestionCount = array.count

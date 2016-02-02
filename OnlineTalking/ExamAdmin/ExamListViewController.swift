@@ -25,11 +25,12 @@ class ExamListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       self.tableView.estimatedRowHeight = 150
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+			let removeAllButton = UIButton(type: .System)
+			removeAllButton.frame = CGRectMake(0, 0, ScreenWidth, 40)
+			removeAllButton.setTitle("一键清空", forState: .Normal)
+			removeAllButton.addTarget(self, action: "deleteAllExamsAction:", forControlEvents: .TouchUpInside)
+			self.tableView.tableHeaderView = removeAllButton
     }
 
   override func viewWillAppear(animated: Bool) {
@@ -82,6 +83,14 @@ class ExamListViewController: UITableViewController {
     }
 
 
+	func deleteAllExamsAction(sender: AnyObject) {
+		self.showAlertWithMessage("确定删除所有抢答题？") {
+			[unowned self]
+			action in
+			self.deleteAllExams()
+		}
+	}
+	
 	@IBAction func cleanExam(sender: AnyObject) {
 		let urlString = "http://api.careerfrog.cn/api/exam-admin/\(TalkingManager.sharedInstance.currentTalkingID)/clean"
 		request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
@@ -160,7 +169,26 @@ class ExamListViewController: UITableViewController {
       }
     }
   }
-  
+	
+	func deleteAllExams() {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
+			[unowned self] in
+			self.committingExamCount = self.examListArray.count
+			for examModel in self.examListArray {
+				NSThread.sleepForTimeInterval(0.1)
+				let urlString = "http://api.careerfrog.cn/api/exam-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(examModel.examId)"
+    
+				request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
+					response in
+					
+					self.committingExamCount--
+					
+					
+				}
+			}
+		}
+	}
+	
   private func createExams(examArray array: [[String: AnyObject]]) {
     self.committingExamCount = array.count
     for dic in array {
