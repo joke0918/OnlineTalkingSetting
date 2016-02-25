@@ -82,10 +82,6 @@ class CommonQuestionListViewController: UITableViewController {
       debugPrint("本地Json读取失败")
     }
     
-//    for dic in array {
-//      debugPrint(dic)
-//    }
-    
   }
   
   // MARK: - Table view delegate
@@ -157,7 +153,8 @@ class CommonQuestionListViewController: UITableViewController {
         let responseDic = response.result.value as? [String: AnyObject]
         else {
           debugPrint(response.result)
-          return }
+          return
+			}
       
       guard responseDic["status"] as? String == "SUCCESS" else { return }
       dispatch_async(dispatch_get_main_queue()) {
@@ -175,8 +172,6 @@ class CommonQuestionListViewController: UITableViewController {
 				let urlString = "http://api.careerfrog.cn/api/comm-qa-admin/\(TalkingManager.sharedInstance.currentTalkingID)/\(questionMdeol.questionId)"
    
 				request(.DELETE, urlString, parameters: nil, encoding: .JSON, headers: nil).responseJSON() {
-			
-			
 					response in
 					self.commitQuestionCount--
 				}
@@ -196,7 +191,8 @@ class CommonQuestionListViewController: UITableViewController {
           let responseDic = response.result.value as? [String: AnyObject]
           else {
             debugPrint(response.result)
-            return }
+            return
+				}
         
         guard responseDic["status"] as? String == "SUCCESS" else { return }
         self.commitQuestionCount--

@@ -23,7 +23,6 @@ class TalkingListViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 			self.automaticallyAdjustsScrollViewInsets = false
-			
 		}
 
 	override func viewWillAppear(animated: Bool) {

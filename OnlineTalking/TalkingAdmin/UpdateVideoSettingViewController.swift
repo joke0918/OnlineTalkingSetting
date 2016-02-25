@@ -87,8 +87,8 @@ class UpdateVideoSettingViewController: UIViewController {
 	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
 		
 		let f = NSDateFormatter()
-		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		let date = f.stringFromDate(self.datePicker.date)
+		f.dateFormat = "yyyy-MM-dd HH:mm"
+		let date = f.stringFromDate(self.datePicker.date) + ":00"
 		if self.beginButton.selected {
 			self.beginButton.setTitle(date, forState: .Normal)
 		}
@@ -103,7 +103,7 @@ class UpdateVideoSettingViewController: UIViewController {
 	@IBAction func changeToCurrentTime(sender: AnyObject) {
 		let f = NSDateFormatter()
 		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		var date = NSDate(timeInterval: 60, sinceDate: NSDate())
+		var date = NSDate(timeInterval: 15, sinceDate: NSDate())
 		self.beginButton.setTitle(f.stringFromDate(date), forState: .Normal)
 		date = NSDate(timeInterval: 60 * 60, sinceDate: date)
 		self.endButton.setTitle(f.stringFromDate(date), forState: .Normal)

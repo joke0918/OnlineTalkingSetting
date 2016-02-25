@@ -69,6 +69,7 @@ class GuestListViewController: UITableViewController {
 	}
 	
 	@IBAction func addLocalGuestsAction(sender: AnyObject) {
+
 		do {
 			guard let filePath = NSBundle.mainBundle().pathForResource("Guests.json", ofType: nil),
 				let data = NSData(contentsOfFile: filePath),

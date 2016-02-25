@@ -1,47 +1,112 @@
-[
- {
- "question" : "以下哪个选项描述的不是罗兰贝格的value？",
- "answer1" : "Entrepreneurship",
- "answer2" : "Partnership",
- "answer3" : "Excellence",
- "answer4" : "Empathy",
- "correctAnswer" : "B",
- "winnerQuantity" : "2",
- "minutes" : "0",
- "seconds" : "10"
- },
- {
- "question" : "罗兰贝格是在哪一年进入中国市场的？",
- "answer1" : "1967年",
- "answer2" : "1976年",
- "answer3" : "1983年",
- "answer4" : "1990年",
- "correctAnswer" : "C",
- "winnerQuantity" : "1",
- "minutes" : "0",
- "seconds" : "30"
- },
- {
- "question" : "罗兰贝格一共有几个competence center？",
- "answer1" : "8",
- "answer2" : "9",
- "answer3" : "10",
- "answer4" : "11",
- "correctAnswer" : "B",
- "winnerQuantity" : "1",
- "minutes" : "0",
- "seconds" : "50"
- },
- {
- "question" : "罗兰贝格在大中华区有几个办公室？",
- "answer1" : "2",
- "answer2" : "3",
- "answer3" : "4",
- "answer4" : "5",
- "correctAnswer" : "D",
- "winnerQuantity" : "1",
- "minutes" : "1",
- "seconds" : "10"
- }
-
- ]
+ [
+	{
+	"answer1" : "瓦特",
+	"answer2" : "爱迪生",
+	"answer3" : "爱因斯坦",
+	"answer4" : "诺贝尔",
+	"correctAnswer" : "B",
+	"minutes" : "1",
+	"question" : "GE的创始人是谁？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "7个",
+	"answer2" : "8个",
+	"answer3" : "9个",
+	"answer4" : "10个",
+	"correctAnswer" : "D",
+	"minutes" : "2",
+	"question" : "GE现在有几大业务集团？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "上海",
+	"answer2" : "北京",
+	"answer3" : "广州",
+	"answer4" : "成都",
+	"correctAnswer" : "A",
+	"minutes" : "3",
+	"question" : "GE的中国研发中心(总部)设立在哪个城市？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "半年",
+	"answer2" : "一年",
+	"answer3" : "二年",
+	"answer4" : "三年",
+	"correctAnswer" : "C",
+	"minutes" : "4",
+	"question" : "EEDP项目的人才培养时长？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "不轮岗",
+	"answer2" : "2-3个",
+	"answer3" : "3-4个",
+	"answer4" : "4个",
+	"correctAnswer" : "C",
+	"minutes" : "5",
+	"question" : "EEDP项目培养期间的有几个轮岗？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "A course",
+	"answer2" : "A,B course",
+	"answer3" : "A,B,C course",
+	"answer4" : "A,B,C,D course",
+	"correctAnswer" : "B",
+	"minutes" : "6",
+	"question" : "EEDP的课程包括几个大部分？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "1923",
+	"answer2" : "1924",
+	"answer3" : "1925",
+	"answer4" : "1926",
+	"correctAnswer" : "A",
+	"minutes" : "7",
+	"question" : "历史悠久的EEDP项目是哪年成立的？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "2015年",
+	"answer2" : "2014年",
+	"answer3" : "2013年",
+	"answer4" : "2012年",
+	"correctAnswer" : "A",
+	"minutes" : "8",
+	"question" : "新生力量SDLP项目是哪年创立的？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "1次",
+	"answer2" : "2次",
+	"answer3" : "3次",
+	"answer4" : "4次",
+	"correctAnswer" : "D",
+	"minutes" : "9",
+	"question" : "SDLP有几次海外培训？",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	},
+	{
+	"answer1" : "能源集团",
+	"answer2" : "研发中心总部",
+	"answer3" : "照明集团",
+	"answer4" : "医疗集团",
+	"correctAnswer" : "D",
+	"minutes" : "10",
+	"question" : "目前GE在中国的那个集团招收SDLP?",
+	"seconds" : "0",
+	"winnerQuantity" : "10"
+	}
+	]

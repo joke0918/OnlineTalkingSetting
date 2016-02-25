@@ -462,7 +462,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A7b-R7-hdI"/>
         <segue reference="OB4-0X-biq"/>
+        <segue reference="A7b-R7-hdI"/>
     </inferredMetricsTieBreakers>
 </document>

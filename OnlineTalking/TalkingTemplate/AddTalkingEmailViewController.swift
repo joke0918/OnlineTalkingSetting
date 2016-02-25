@@ -96,6 +96,10 @@ class AddTalkingEmailViewController: UIViewController {
 				self.titleTextField.text = templateDic["title"] as? String
 				self.contentTextView.text = templateDic["content"] as? String
 			}
+			if self.name == "template.exam.winner.user" {
+				self.titleTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】若你获得了「\(TalkingManager.sharedInstance.talkingModel.name)」直通券，请务必在24小时内完成网申！"
+				self.contentTextView.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】若你获得了「\(TalkingManager.sharedInstance.talkingModel.name)」直通券，请务必在24小时内完成网申！"
+			}
 		} catch {
 			
 		}
