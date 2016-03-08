@@ -768,7 +768,7 @@
 				);
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.yeo.onlinetalking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.yeo.onlinetalking11111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1ac2a00b-4c9f-4b26-b669-e3d7e7cb3a78";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -791,7 +791,7 @@
 				);
 				INFOPLIST_FILE = OnlineTalking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.yeo.onlinetalking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.careerfrog.yeo.onlinetalking11111;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1ac2a00b-4c9f-4b26-b669-e3d7e7cb3a78";
 				TARGETED_DEVICE_FAMILY = 1;
