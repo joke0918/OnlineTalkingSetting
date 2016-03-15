@@ -353,10 +353,37 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="QuestionAdmin" id="cot-2L-p5A">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="bWJ-HG-6Jb">
+                                        <rect key="frame" x="0.0" y="784" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bWJ-HG-6Jb" id="viz-jf-d5z">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuickQuiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaX-uL-K85">
+                                                    <rect key="frame" x="15" y="12" width="79" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zaX-uL-K85" firstAttribute="leading" secondItem="viz-jf-d5z" secondAttribute="leading" constant="15" id="GPz-2d-Srm"/>
+                                                <constraint firstItem="zaX-uL-K85" firstAttribute="centerY" secondItem="viz-jf-d5z" secondAttribute="centerY" id="rSy-4Q-di0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zJi-HH-asD" kind="push" id="gfk-b9-xdg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="TalkingTemplate" id="7mf-QN-ReM">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="rAB-wP-p4N">
-                                        <rect key="frame" x="0.0" y="784" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="856" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rAB-wP-p4N" id="eLB-2F-YQd">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
@@ -419,6 +446,16 @@
             </objects>
             <point key="canvasLocation" x="547.5" y="870"/>
         </scene>
+        <!--QuestionAdmin-->
+        <scene sceneID="vps-u8-M8h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuestionAdmin" id="zJi-HH-asD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hoc-YG-m2M"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUD-p3-txX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787.5" y="870"/>
+        </scene>
         <!--TalkingTemplate-->
         <scene sceneID="MQ6-yn-rV0">
             <objects>
@@ -427,7 +464,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZB-gv-UDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787.5" y="869"/>
+            <point key="canvasLocation" x="989" y="870"/>
         </scene>
         <!--Talking-->
         <scene sceneID="CZf-1D-gnr">
@@ -437,7 +474,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uoK-wT-nLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="989.5" y="869"/>
+            <point key="canvasLocation" x="1140" y="869"/>
         </scene>
         <!--Update Registration Setting View Controller-->
         <scene sceneID="2eD-5s-4qY">
@@ -903,13 +940,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-Tq-8cx">
-                                                <rect key="frame" x="50" y="0.0" width="295" height="30"/>
+                                                <rect key="frame" x="50" y="0.0" width="148" height="30"/>
                                                 <connections>
-                                                    <action selector="beginAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="dzR-d7-uum"/>
+                                                    <action selector="beginDateAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="tWF-oZ-qlI"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-05-O6U">
+                                                <rect key="frame" x="197" y="0.0" width="148" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="fC0-05-O6U" firstAttribute="width" secondItem="1hy-Tq-8cx" secondAttribute="width" id="1Xe-yj-Jqj"/>
                                             <constraint firstAttribute="height" constant="30" id="YmU-TW-ted"/>
                                         </constraints>
                                     </stackView>
@@ -926,13 +969,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GI-vX-BEE">
-                                                <rect key="frame" x="50" y="0.0" width="295" height="30"/>
+                                                <rect key="frame" x="50" y="0.0" width="148" height="30"/>
                                                 <connections>
-                                                    <action selector="endAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="Ug7-3v-Rmm"/>
+                                                    <action selector="endDateAction:" destination="5Cg-Zc-u3L" eventType="touchUpInside" id="kFr-tV-Xjw"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCe-pm-Lfc">
+                                                <rect key="frame" x="198" y="0.0" width="147" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="zCe-pm-Lfc" firstAttribute="width" secondItem="3GI-vX-BEE" secondAttribute="width" id="JCn-31-z4Z"/>
                                             <constraint firstAttribute="height" constant="30" id="v0k-SB-5u9"/>
                                         </constraints>
                                     </stackView>
@@ -997,7 +1046,7 @@
                                             <action selector="datePickerViewConfirmAction:" destination="F4d-7h-nTt" eventType="touchUpInside" id="nFM-Qp-Vfd"/>
                                         </connections>
                                     </button>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pla-pA-psc">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pla-pA-psc">
                                         <rect key="frame" x="0.0" y="34" width="375" height="216"/>
                                         <date key="date" timeIntervalSinceReferenceDate="474536319.43040198">
                                             <!--2016-01-15 07:38:39 +0000-->
@@ -1031,10 +1080,12 @@
                     <navigationItem key="navigationItem" id="cgl-gu-qzd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="beginButton" destination="1hy-Tq-8cx" id="BtE-rG-34s"/>
+                        <outlet property="beginDateButton" destination="1hy-Tq-8cx" id="kh3-Gs-5DX"/>
+                        <outlet property="beginTimeTextField" destination="fC0-05-O6U" id="Q6u-5o-6it"/>
                         <outlet property="datePicker" destination="pla-pA-psc" id="45O-Yn-30J"/>
                         <outlet property="datePickerView" destination="W3v-JO-2kc" id="FVn-7N-oZV"/>
-                        <outlet property="endButton" destination="3GI-vX-BEE" id="CZq-UD-oPI"/>
+                        <outlet property="endDateButton" destination="3GI-vX-BEE" id="M8Q-Dw-Pos"/>
+                        <outlet property="endTimeTextField" destination="zCe-pm-Lfc" id="Z8j-qP-qcr"/>
                         <outlet property="urlTextField" destination="PJ9-wc-dgA" id="P1s-Yz-hBs"/>
                     </connections>
                 </viewController>

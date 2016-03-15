@@ -43,7 +43,7 @@ class AddTalkingSmsViewController: UIViewController {
 		
 		if name == "template.exam.winner.user" {
 			self.valuesTextField.text = "online_talk_name"
-			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】若你获得了「{online_talk_name}」直通券，请务必在24小时内完成网申！"
+			self.contentTextField.text = "【\(TalkingManager.sharedInstance.talkingModel.shortName)】恭喜你获得了「{online_talk_name}」电面直通券，请务必在24小时内完成网申！GE HR会在1-2周内以邮件或电话联系你，请耐心等待。"
 			self.title = "直通券短信"
 		}
 		

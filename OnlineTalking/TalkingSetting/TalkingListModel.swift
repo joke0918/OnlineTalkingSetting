@@ -25,28 +25,59 @@ class TalkingListModel: NSObject {
 	
 	init(dic: [String: AnyObject]) {
 		super.init()
-		guard let applyUrl = dic["applyUrl"] as? String else { return }
-		guard let mobileApplyUrl = dic["mobileApplyUrl"] as? String else { return }
-		guard let companyId = dic["companyId"] as? String else { return }
-		guard let domainUrl = dic["domainUrl"] as? String else { return }
-		guard let name = dic["name"] as? String else { return }
-		guard let shortName = dic["shortName"] as? String else { return }
-		guard let talkingId = dic["talkingId"] as? String else { return }
-		guard let talkingScreenId = dic["talkingScreenId"] as? String else { return }
-		guard let begin = dic["begin"]?.doubleValue else { return }
-		guard let end = dic["end"]?.doubleValue else { return }
-		guard let test = dic["test"]?.boolValue else { return }
-		self.applyUrl = applyUrl
-		self.mobileApplyUrl = mobileApplyUrl
-		self.companyId = companyId
-		self.domainUrl = domainUrl
-		self.name = name
-		self.shortName = shortName
-		self.talkingId = talkingId
-		self.talkingScreenId = talkingScreenId
-		self.begin = begin
-		self.end = end
-		self.test = test
+		
+		if let applyUrl = dic["applyUrl"] as? String {
+			self.applyUrl = applyUrl
+
+		}
+		
+		if let mobileApplyUrl = dic["mobileApplyUrl"] as? String {
+			self.mobileApplyUrl = mobileApplyUrl
+
+		}
+		
+		if let companyId = dic["companyId"] as? String {
+			self.companyId = companyId
+
+		}
+
+		if let domainUrl = dic["domainUrl"] as? String {
+			self.domainUrl = domainUrl
+
+		}
+		
+		if let name = dic["name"] as? String {
+			self.name = name
+
+		}
+		
+		if let shortName = dic["shortName"] as? String {
+			self.shortName = shortName
+
+		}
+		
+		if let talkingId = dic["talkingId"] as? String {
+			self.talkingId = talkingId
+
+		}
+		
+		if let talkingScreenId = dic["talkingScreenId"] as? String {
+			self.talkingScreenId = talkingScreenId
+
+		}
+		if let begin = dic["begin"]?.doubleValue {
+			self.begin = begin
+
+		}
+		if let end = dic["end"]?.doubleValue {
+			self.end = end
+
+		}
+		if let test = dic["test"]?.boolValue {
+			self.test = test
+
+		}
+
 		
 		let f = NSDateFormatter()
 		f.dateFormat = "yyyy-MM-dd HH:mm:ss"

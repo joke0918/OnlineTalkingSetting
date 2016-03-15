@@ -13,19 +13,26 @@ class UpdateVideoSettingViewController: UIViewController {
 
 	var talkingModel: TalkingModel!
 	
-	@IBOutlet weak var beginButton: UIButton! {
+	@IBOutlet weak var beginDateButton: UIButton! {
 		didSet {
-			self.beginButton.addDefaultCornerRadius()
+			self.beginDateButton.addDefaultCornerRadius()
 		}
 	}
+
 
 	
-	@IBOutlet weak var endButton: UIButton! {
+	
+	@IBOutlet weak var endDateButton: UIButton! {
 		didSet {
-			self.endButton.addDefaultCornerRadius()
+			self.endDateButton.addDefaultCornerRadius()
 		}
 	}
 
+
+	
+	@IBOutlet weak var beginTimeTextField: UITextField!
+	
+	@IBOutlet weak var endTimeTextField: UITextField!
 	
 	@IBOutlet weak var urlTextField: UITextField!
 	
@@ -36,11 +43,16 @@ class UpdateVideoSettingViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+
 			self.talkingModel = TalkingManager.sharedInstance.talkingModel
 			self.prepareData()
 			self.fillDataForUI()
 			self.setBackToMainViewControllerBarButton()
         // Do any additional setup after loading the view.
+			
+			
+			
+			
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,16 +80,16 @@ class UpdateVideoSettingViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func beginAction(sender: AnyObject) {
+	@IBAction func beginDateAction(sender: AnyObject) {
 		self.datePickerView.hidden = false
-		self.beginButton.selected = true
-		self.endButton.selected = false
+		self.beginDateButton.selected = true
+		self.endDateButton.selected = false
 	}
 	
-	@IBAction func endAction(sender: AnyObject) {
+	@IBAction func endDateAction(sender: AnyObject) {
 		self.datePickerView.hidden = false
-		self.endButton.selected = true
-		self.beginButton.selected = false
+		self.endDateButton.selected = true
+		self.beginDateButton.selected = false
 	}
 	
 	@IBAction func confirmAction(sender: AnyObject) {
@@ -87,14 +99,16 @@ class UpdateVideoSettingViewController: UIViewController {
 	@IBAction func datePickerViewConfirmAction(sender: AnyObject) {
 		
 		let f = NSDateFormatter()
-		f.dateFormat = "yyyy-MM-dd HH:mm"
-		let date = f.stringFromDate(self.datePicker.date) + ":00"
-		if self.beginButton.selected {
-			self.beginButton.setTitle(date, forState: .Normal)
+		f.dateFormat = "yyyy-MM-dd"
+
+		let date = f.stringFromDate(self.datePicker.date)
+		if self.beginDateButton.selected {
+			self.beginDateButton.setTitle(date, forState: .Normal)
 		}
-		if self.endButton.selected {
-			self.endButton.setTitle(date, forState: .Normal)
+		if self.endDateButton.selected {
+			self.endDateButton.setTitle(date, forState: .Normal)
 		}
+		
 		UIView.animateWithDuration(0.5) {
 			self.datePickerView.hidden = true
 		}
@@ -103,23 +117,27 @@ class UpdateVideoSettingViewController: UIViewController {
 	@IBAction func changeToCurrentTime(sender: AnyObject) {
 		let f = NSDateFormatter()
 		f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		var date = NSDate(timeInterval: 15, sinceDate: NSDate())
-		self.beginButton.setTitle(f.stringFromDate(date), forState: .Normal)
+		var date = NSDate(timeInterval: 30, sinceDate: NSDate())
+	
+		self.beginDateButton.setTitle(f.stringFromDate(date).componentsSeparatedByString(" ").first, forState: .Normal)
+		self.beginTimeTextField.text = f.stringFromDate(date).componentsSeparatedByString(" ").last
 		date = NSDate(timeInterval: 60 * 60, sinceDate: date)
-		self.endButton.setTitle(f.stringFromDate(date), forState: .Normal)
-		
+		self.endDateButton.setTitle(f.stringFromDate(date).componentsSeparatedByString(" ").first, forState: .Normal)
+		self.endTimeTextField.text = f.stringFromDate(date).componentsSeparatedByString(" ").last
 	}
 	
 	func updateVideoSetting() {
-		guard let begin = beginButton.titleForState(.Normal),
-			let end = endButton.titleForState(.Normal),
+		guard let beginDate = beginDateButton.titleForState(.Normal),
+			let endDate = endDateButton.titleForState(.Normal),
+			let beginTime = beginTimeTextField.text,
+			let endTime = endTimeTextField.text,
 			let url = self.urlTextField.text else {
 				debugPrint("输入信息有误")
 				return
 		}
 		let bodyDic = [
-			"begin": begin,
-			"end": end,
+			"begin": beginDate + " " + beginTime,
+			"end": endDate + " " + endTime,
 			"url": url
 		]
 		let urlString = "http://api.careerfrog.cn/api/talking-admin/talking/" + "\(TalkingManager.sharedInstance.currentTalkingID)" + "/video"
@@ -140,8 +158,12 @@ class UpdateVideoSettingViewController: UIViewController {
 	}
 	
 	func fillDataForUI() {
-		self.beginButton.setTitle(self.talkingModel.videoBeginString, forState: .Normal)
-		self.endButton.setTitle(self.talkingModel.videoEndString, forState: .Normal)
+		self.beginDateButton.setTitle(self.talkingModel.videoBeginString.componentsSeparatedByString(" ").first, forState: .Normal)
+		self.endDateButton.setTitle(self.talkingModel.videoEndString.componentsSeparatedByString(" ").first, forState: .Normal)
+
+		self.beginTimeTextField.text = self.talkingModel.videoBeginString.componentsSeparatedByString(" ").last
+		self.endTimeTextField.text = self.talkingModel.videoEndString.componentsSeparatedByString(" ").last
+		
 		self.urlTextField.text = self.talkingModel.videoUrl
 	}
 	
@@ -158,9 +180,12 @@ class UpdateVideoSettingViewController: UIViewController {
 			let f = NSDateFormatter()
 			f.dateFormat = "yyyy-MM-dd HH:mm:ss"
 			var date = NSDate(timeInterval: 30, sinceDate: NSDate())
-			self.beginButton.setTitle(f.stringFromDate(date), forState: .Normal)
+			
+			self.beginDateButton.setTitle(f.stringFromDate(date).componentsSeparatedByString(" ").first, forState: .Normal)
+			self.beginTimeTextField.text = f.stringFromDate(date).componentsSeparatedByString(" ").last
 			date = NSDate(timeInterval: 60 * 60, sinceDate: date)
-			self.endButton.setTitle(f.stringFromDate(date), forState: .Normal)
+			self.endDateButton.setTitle(f.stringFromDate(date).componentsSeparatedByString(" ").first, forState: .Normal)
+			self.endTimeTextField.text = f.stringFromDate(date).componentsSeparatedByString(" ").last
 			self.updateVideoSetting()
 		}
 		return [currentTimeAction]

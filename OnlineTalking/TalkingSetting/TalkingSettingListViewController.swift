@@ -76,6 +76,8 @@ class TalkingSettingListViewController: UITableViewController {
 				let resultDic = responseDic["result"] as? [String: AnyObject] else { return }
 			let talkingModel = TalkingModel(dic: resultDic)
 			TalkingManager.sharedInstance.talkingModel = talkingModel
+			debugPrint("Name:\(talkingModel.domainUrl)")
+			debugPrint("TalkingId:\(talkingModel.talkingId)")
 		}
 	}
 	

@@ -242,7 +242,6 @@ extension ExamListViewController {
     // #warning Incomplete implementation, return the number of rows
     return self.examListArray.count
   }
-  
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
   let cell = tableView.dequeueReusableCellWithIdentifier("ExamListCell", forIndexPath: indexPath) as! ExamListCell
@@ -256,7 +255,6 @@ extension ExamListViewController {
   }
 
 }
-
 
 
 

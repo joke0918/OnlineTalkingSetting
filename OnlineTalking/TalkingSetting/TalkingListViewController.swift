@@ -125,6 +125,7 @@ class TalkingListViewController: UIViewController {
 			var array: [TalkingListModel] = []
 			for talkingListDic in resultDic {
 				let model = TalkingListModel(dic: talkingListDic)
+				
 				array.append(model)
 			}
 			self.talkingListArray = array.sort {
